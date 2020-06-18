@@ -7,11 +7,18 @@
   "engines": {
     "node": ">=6.13.0"
   },
-  "scripts": {},
+  "scripts": {
+    "start": "nodemon server/server.js"
+  },
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "faker": "^4.1.0",
-    "mongo": "^0.1.0",
-    "mongoose": "^5.9.19"
+    "mongodb": "^3.5.9",
+    "mongoose": "^5.9.19",
+    "morgan": "^1.10.0",
+    "webpack": "^4.43.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^3.3.0",
