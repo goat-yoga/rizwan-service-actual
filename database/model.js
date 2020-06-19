@@ -1,11 +1,12 @@
-const db = require('./index.js');
+const { productModel, popularSuggestionsModel, categoryModel, pagesModel } = require('./index.js');
 
 let model = {
-  getNavComponents: (something) => {
-    conn.then(client => client.collection('search').find({}).toArray((err, docs) => {
-      if (err) { console.error(err) }
-      res.send(JSON.stringify(docs))
-    })
-    );
+  fetchSearchData: (callback) => {
+    productModel.find({})
+      .exec((err, result) => {
+        err ? callback(err, null) : callback(null, result)
+      })
   }
-}
+};
+
+module.exports = model;
