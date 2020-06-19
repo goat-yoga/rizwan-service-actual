@@ -1,9 +1,11 @@
 let model = require('../database/model.js');
 
 let searchController = {
-  displayNav: (req, res) => {
-    model.getNavComponents((something) => {
-      // TODO: access model to display Nav
+  // fetches full database
+  // TODO: figure out how to filter based on search query
+  displaySearch: (req, res) => {
+    model.fetchSearchData((err, result) => {
+      err ? console.log(err) : res.status(200).json(result);
     });
   }
 };
