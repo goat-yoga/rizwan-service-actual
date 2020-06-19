@@ -1,7 +1,7 @@
 const faker = require('faker');
 
 // create 100 products
-let createProduct = () => {
+let createProducts = () => {
   let array = [];
 
   // creates obj w/ fake names, price btw/ 50-150 & img
@@ -39,6 +39,6 @@ let createMiscPages = () => {
 }
 
 // create obj holding created methods
-let seedMethods = { createProduct, createMiscPages }
+let seedMethods = { createProducts, createMiscPages }
 
 module.exports = seedMethods;

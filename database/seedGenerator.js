@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { createProduct, createMiscPages } = require('./seed.js')
+const { createProducts, createMiscPages } = require('./seed.js')
 const MongoClient = require('mongodb').MongoClient;
 
 let url = 'mongodb://localhost/Nav_Bar'; // connect to DB: "Nav_Bar"
@@ -25,11 +25,34 @@ let popularSuggestionsModel = mongoose.model('Popular_Suggestions', popularSugge
 let categoryModel = mongoose.model('Category', categorySchema);
 let pagesModel = mongoose.model('Pages', pagesSchema);
 
+// seed products into db
+let seedSpecificModel = (items, model) => {
+  let itemList = [];
 
+  // iterates through items
+  // pushes each unit into array
+  items.forEach(item => {
+    let unit = new model(item);
+    itemList.push(unit);
+  });
 
+  // inserts the itemList into DB
+  model.insertMany(itemList, (err) => {
+    err ? console.log(err) : console.log('unit was seeded')
+  });
 
-// creates and connects to client.
-// have access to DB
-var conn = MongoClient.connect(url) // returns a Promise
+  console.log("seedSpecificModel complete")
+}
 
-module.exports = conn;
+// creates list of products
+let allProducts = createProducts();
+
+// creates list of pg names in 3 sections
+let allPopulatSuggestions = createMiscPages();
+let allCategories = createMiscPages();
+let allPages = createMiscPages();
+
+seedSpecificModel(allProducts, productModel);
+seedSpecificModel(allPopulatSuggestions, popularSuggestionsModel);
+seedSpecificModel(allCategories, categoryModel);
+seedSpecificModel(allPages, pagesModel);
