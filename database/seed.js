@@ -8,7 +8,6 @@ let createProduct = () => {
   for (let i = 0; i < 100; i++) {
 
     let productObj = {
-      _id: i + 1,
       name: faker.commerce.product(),
       price: Math.floor(Math.random() * 100) + 50,
       img: faker.image.fashion()
@@ -20,7 +19,9 @@ let createProduct = () => {
   return array;
 }
 
-// create 15 pages for other 3 sections in search
+// create 15 pages for popular suggestions
+// create 15 pages for category
+// create 15 pages for pages
 let createMiscPages = () => {
   let array = [];
 
@@ -28,7 +29,6 @@ let createMiscPages = () => {
   for (let i = 0; i < 15; i++) {
 
     let productObj = {
-      _id: i + 1,
       page_name: faker.commerce.product(),
     };
 
