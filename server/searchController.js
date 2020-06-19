@@ -1,6 +1,6 @@
 let model = require('../database/model.js');
 
-let controller = {
+let searchController = {
   displayNav: (req, res) => {
     model.getNavComponents((something) => {
       // TODO: access model to display Nav
@@ -8,4 +8,4 @@ let controller = {
   }
 };
 
-module.exports = controller;
+module.exports = searchController;

@@ -11,17 +11,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 
+app.use('/', router); // TODO: figure out where route is going to
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
 
-app.use(express.static(path.join(__dirname, 'public')));
-
-// const faker = require('faker');
-
-// let names = [];
-// for (var i = 0; i < 3; i++) {
-//   var randomName = faker.name.firstName();
-//   names.push(randomName);
-// }
-
-// console.log(names);
+app.use(express.static(path.join(__dirname, '../public')));
