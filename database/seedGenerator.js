@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
 const { createProducts, createMiscPages } = require('./seed.js')
-const MongoClient = require('mongodb').MongoClient;
 
-let url = 'mongodb://localhost/Nav_Bar'; // connect to DB: "Nav_Bar"
-mongoose.connect(url);
+let url = 'mongodb://localhost/Nav_Bar'; // connect to local DB: "Nav_Bar"
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }); // get access to DB w/ connecting
 
 let Schema = mongoose.Schema;
 
@@ -25,12 +24,12 @@ let popularSuggestionsModel = mongoose.model('Popular_Suggestions', popularSugge
 let categoryModel = mongoose.model('Category', categorySchema);
 let pagesModel = mongoose.model('Pages', pagesSchema);
 
-// seed products into db
-let seedSpecificModel = (items, model) => {
+// seed items into respective models db
+let seedItemsIntoModel = (items, model) => {
   let itemList = [];
 
-  // iterates through items
-  // pushes each unit into array
+  // iterates through array of items
+  // push each unit into itemsList
   items.forEach(item => {
     let unit = new model(item);
     itemList.push(unit);
@@ -41,7 +40,7 @@ let seedSpecificModel = (items, model) => {
     err ? console.log(err) : console.log('unit was seeded')
   });
 
-  console.log("seedSpecificModel complete")
+  console.log(`${model} has been fully seeded`);
 }
 
 // creates list of products
@@ -52,7 +51,8 @@ let allPopulatSuggestions = createMiscPages();
 let allCategories = createMiscPages();
 let allPages = createMiscPages();
 
-seedSpecificModel(allProducts, productModel);
-seedSpecificModel(allPopulatSuggestions, popularSuggestionsModel);
-seedSpecificModel(allCategories, categoryModel);
-seedSpecificModel(allPages, pagesModel);
+// seed each items into model
+seedItemsIntoModel(allProducts, productModel);
+seedItemsIntoModel(allPopulatSuggestions, popularSuggestionsModel);
+seedItemsIntoModel(allCategories, categoryModel);
+seedItemsIntoModel(allPages, pagesModel);
