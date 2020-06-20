@@ -51,13 +51,13 @@ let seedItemsIntoModel = (items, model) => {
 let allProducts = createProducts();
 
 // creates list of pg names in 3 sections
-let allPopulatSuggestions = createMiscPages();
+let allPopularSuggestions = createMiscPages();
 let allCategories = createMiscPages();
 let allPages = createMiscPages();
 
 
 // seed each items into model
 seedItemsIntoModel(allProducts, productModel);
-seedItemsIntoModel(allPopulatSuggestions, popularSuggestionsModel);
+seedItemsIntoModel(allPopularSuggestions, popularSuggestionsModel);
 seedItemsIntoModel(allCategories, categoryModel);
 seedItemsIntoModel(allPages, pagesModel);
