@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Header extends React.Component {
+export default class Main_Nav extends React.Component {
   constructor(props) {
     super(props);
     this.state = {}

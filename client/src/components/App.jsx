@@ -1,7 +1,7 @@
 import React from 'react';
-import Universal-Banner from './App-Subcomponents/Universal-Banner.jsx';
+import Universal_Banner from './App-Subcomponents/Universal_Banner.jsx';
 import Header from './App-Subcomponents/Header.jsx';
-import Main-Nav from './App-Subcomponents/Main-Nav.jsx';
+import Main_Nav from './App-Subcomponents/Main_Nav.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,9 +12,9 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Universal-Banner />
+        <Universal_Banner />
         <Header />
-        <Main-Nav />
+        <Main_Nav />
       </div>
     )
   }
