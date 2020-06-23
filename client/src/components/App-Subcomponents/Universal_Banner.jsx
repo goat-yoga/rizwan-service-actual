@@ -16,6 +16,27 @@ export default class Universal_Banner extends React.Component {
       ],
       messageIndex: 0
     }
+    this.displayBannerMsg = this.displayBannerMsg.bind(this);
+  }
+
+  // index refers to msgIndex
+  displayBannerMsg(index, order) {
+    let { messages } = this.state
+    // increment index, if order is 'next'
+    if (order === 'next') {
+      index++;
+      // initialize index
+      // if index is equal to msgs.length
+      if (index === messages.length) { index = 0; }
+    }
+
+    // if order is 'back', decrement index
+    if (order === 'back') {
+      // decrement index
+      index--;
+      // index is last message in list if index is negative
+      if (index < 0) { index = messages.length - 1; }
+    }
   }
 
 
