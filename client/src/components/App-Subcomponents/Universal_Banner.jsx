@@ -1,4 +1,8 @@
 import React from 'react';
+import Messages from './Universal_Banner-Subcomponents/Messages.jsx';
+import BackArrow from './Universal_Banner-Subcomponents/BackArrow.jsx';
+import NextArrow from './Universal_Banner-Subcomponents/NextArrow.jsx';
+
 
 export default class Universal_Banner extends React.Component {
   constructor(props) {
@@ -16,8 +20,12 @@ export default class Universal_Banner extends React.Component {
 
 
   render() {
+    let { messages, messageIndex } = this.state;
     return (
       <div>
+        <BackArrow />
+        <Messages message={messages[messageIndex]} />
+        <NextArrow />
       </div>
     )
   }
