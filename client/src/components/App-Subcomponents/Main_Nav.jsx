@@ -1,4 +1,6 @@
 import React from 'react';
+import MenuElement from './Main_Nav-Subcomponents/MenuElement.jsx';
+
 
 export default class Main_Nav extends React.Component {
   constructor(props) {
@@ -8,7 +10,17 @@ export default class Main_Nav extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="Main-Nav">
+
+        <div className="Main-Nav Menu-Choices">
+          <ul>
+            <MenuElement />
+            <MenuElement />
+            <MenuElement />
+            <MenuElement />
+          </ul>
+        </div>
+
       </div>
     )
   }
