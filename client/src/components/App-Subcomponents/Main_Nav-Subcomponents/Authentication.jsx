@@ -2,7 +2,10 @@ import React from 'react';
 
 const Authentication = (props) => {
   return (
-    <li>{props.name}</li>
+    <li>
+      {props.name}
+      {"image of a person"}
+    </li>
   )
 }
 

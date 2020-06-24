@@ -2,7 +2,10 @@ import React from 'react';
 
 const Cart = (props) => {
   return (
-    <li>{props.name}</li>
+    <li>
+      {props.name}
+      {'image of a cart'}
+    </li>
   )
 }
 
