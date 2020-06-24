@@ -26,11 +26,7 @@ export default class Universal_Banner extends React.Component {
 
     // increment index, if order is 'next'
     if (order === 'next') {
-      console.log(this.state.messageIndex)
-      console.log(messages)
-      this.setState({
-        messageIndex: index++
-      })
+      index++
       // initialize index
       // if index is equal to msgs.length
       if (index === messages.length) { index = 0; }
@@ -43,7 +39,9 @@ export default class Universal_Banner extends React.Component {
       // index is last message in list if index is negative
       if (index < 0) { index = messages.length - 1; }
     }
-    console.log(index);
+
+    // change state after index manipulation
+    this.setState({ messageIndex: index })
   }
 
 
