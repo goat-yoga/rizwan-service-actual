@@ -1,7 +1,9 @@
 import React from 'react';
 
 const MenuElement = (props) => {
-
+  return (
+    <li>{props.name}</li>
+  )
 }
 
-expoer default MenuElement;
+export default MenuElement;
