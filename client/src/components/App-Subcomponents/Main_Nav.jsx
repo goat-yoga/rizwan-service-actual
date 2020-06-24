@@ -12,7 +12,7 @@ export default class Main_Nav extends React.Component {
 
   render() {
     return (
-      <div className="Main-Nav">
+      <div className="Main-Nav Menu">
         <h5>Main Nav goes here</h5>
 
         <div id="logo">
@@ -25,12 +25,6 @@ export default class Main_Nav extends React.Component {
             <MenuElement name={"WOMEN"} />
             <MenuElement name={"MEN"} />
             <MenuElement name={"SALE"} />
-          </ul>
-        </div>
-
-        <div className="Main-Nav we-are-alo">
-          <ul>
-            <MenuElement name={"WE ARE ALO"} />
           </ul>
         </div>
 

@@ -1,9 +1,31 @@
 import React from 'react';
 
-const Search = (props) => {
-  return (
-    <li>{props.name}</li>
-  )
-}
+export default class Search extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchResults: ''
+    }
+    this.handleSearch = this.handleSearch.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
+  }
 
-export default Search;
+  // TODO: send get request to display items when searching
+
+  handleSearch(e) {
+    this.setState({ searchResults: e.target.value })
+  }
+
+  handleKeyPress(e) {
+    if (event.key === 'Enter') { console.log('Pressed Enter!') }
+  }
+
+  // TODO: Have to render dropdown menu with DB items when searching
+  render() {
+    return (
+      <li>
+        <input type="search" placeholder="Search" onChange={(e) => this.handleSearch(e)} onKeyPress={(e) => this.handleKeyPress(e)} />
+      </li >
+    )
+  }
+}
