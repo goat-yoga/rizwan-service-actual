@@ -1,6 +1,8 @@
 import React from 'react';
 import MenuElement from './Main_Nav-Subcomponents/MenuElement.jsx';
-
+import Search from './Main_Nav-Subcomponents/Search.jsx';
+import Authentication from './Main_Nav-Subcomponents/Authentication.jsx';
+import Cart from './Main_Nav-Subcomponents/Cart.jsx';
 
 export default class Main_Nav extends React.Component {
   constructor(props) {
@@ -23,6 +25,26 @@ export default class Main_Nav extends React.Component {
             <MenuElement name={"WOMEN"} />
             <MenuElement name={"MEN"} />
             <MenuElement name={"SALE"} />
+          </ul>
+        </div>
+
+        <div className="Main-Nav we-are-alo">
+          <ul>
+            <MenuElement name={"WE ARE ALO"} />
+          </ul>
+        </div>
+
+        <div className="Main-Nav we-are-alo">
+          <ul>
+            <MenuElement name={"WE ARE ALO"} />
+          </ul>
+        </div>
+
+        <div className="Main-Nav Navbar-icons">
+          <ul>
+            <Search />
+            <Authentication />
+            <Cart />
           </ul>
         </div>
 
