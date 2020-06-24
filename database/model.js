@@ -7,7 +7,12 @@ let model = {
     // stores search data here
     let searchData = {}
 
-    // adds products from DB to searchData
+    // adds 3 Products from DB to searchData
+    // adds 3 Pages from DB to searchData
+    // adds 3 categories from DB to searchData
+    // adds 4 Popular Suggestions from DB to searchData
+    // searchData is JSON.obj being passed to client!
+
     productModel.find({
       name: {
         $regex: `${search}`,
@@ -17,6 +22,7 @@ let model = {
       .then((results) => {
         searchData.products = results;
       })
+
       .then(() => {
         pagesModel.find({
           page_name: {
@@ -27,50 +33,41 @@ let model = {
           .then((results) => {
             searchData.pages = results;
           })
-          .then()
 
+          .then(() => {
+            categoryModel.find({
+              page_name: {
+                $regex: `${search}`,
+                $options: 'i'
+              }
+            }).limit(3).exec()
+              .then((results) => {
+                searchData.categories = results;
+              })
+
+              .then(() => {
+                popularSuggestionsModel.find({
+                  page_name: {
+                    $regex: `${search}`,
+                    $options: 'i'
+                  }
+                }).limit(4).exec()
+                  .then((results) => {
+                    searchData.popularSuggestions = results;
+                    console.log(searchData);
+                  })
+
+                  .then(() => {
+                    console.log(searchData);
+                    callback(null, searchData)
+                  })
+              })
+          })
       })
       .catch(err => console.log(err))
 
-    // console.log(searchData)
-    // // adds pages from DB to searchData
-    // pagesModel.find({
-    //   page_name: {
-    //     $regex: `${search}`,
-    //     $options: 'i'
-    //   }
-    // }).limit(3)
-    //   .exec((err, result) => {
-    //     err ? callback(err, null) : searchData.pages = result
-    //   })
-
-    // // adds category from DB to searchData
-    // categoryModel.find({
-    //   page_name: {
-    //     $regex: `${search}`,
-    //     $options: 'i'
-    //   }
-    // }).limit(3)
-    //   .exec((err, result) => {
-    //     err ? callback(err, null) : searchData.categories = result
-    //   })
-
-    // // adds pages from DB to searchData
-    // popularSuggestionsModel.find({
-    //   page_name: {
-    //     $regex: `${search}`,
-    //     $options: 'i'
-    //   }
-    // }).limit(3)
-    //   .exec((err, result) => {
-    //     err ? callback(err, null) : searchData.popularSuggestions = result
-    //   })
   }
 };
-
-model.fetchSearchData({ search: 'ba' }, (err, searchResults) => {
-  err ? console.log(err) : res.status(200).json(searchResults);
-})
 
 module.exports = model;
 
