@@ -2,8 +2,8 @@ const { productModel, popularSuggestionsModel, categoryModel, pagesModel } = req
 
 let model = {
   // fetches search result
-  fetchSearchData: (body, callback) => {
-    let { search } = body
+  fetchSearchData: (query, callback) => {
+    let { search } = query
     // stores search data here
     let searchData = {}
 
@@ -54,11 +54,9 @@ let model = {
                 }).limit(4).exec()
                   .then((results) => {
                     searchData.popularSuggestions = results;
-                    console.log(searchData);
                   })
 
                   .then(() => {
-                    console.log(searchData);
                     callback(null, searchData)
                   })
               })
