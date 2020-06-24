@@ -13,7 +13,9 @@ export default class App extends React.Component {
     return (
       <div>
         <Universal_Banner />
+        <br />
         <Header />
+        <br />
         <Main_Nav />
       </div>
     )
