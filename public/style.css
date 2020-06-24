@@ -1,7 +1,8 @@
-.Main-Nav {
+.Menu {
 border: 1px solid black
 }
 
-.Univ-Banner {
+.Univ-Banner, .Header {
   border: 1px solid black
 }
+

@@ -1,4 +1,5 @@
 import React from 'react';
+import HeaderElement from './Header-Subcomponents/HeaderElement.jsx';
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -8,7 +9,13 @@ export default class Header extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="Header">
+        <ul>
+          <HeaderElement name={'SHOP'} />
+          <HeaderElement name={'ALO MOVES'} />
+          <HeaderElement name={'ALO GIVES'} />
+          <HeaderElement name={'STORES & STUDIOS'} />
+        </ul>
       </div>
     )
   }
