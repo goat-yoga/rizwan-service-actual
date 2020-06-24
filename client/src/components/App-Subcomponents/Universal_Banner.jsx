@@ -19,28 +19,26 @@ export default class Universal_Banner extends React.Component {
     this.displayBannerMsg = this.displayBannerMsg.bind(this);
   }
 
-  // index refers to messageIndex
+  // increment index, if order is 'next'
+  // initialize index if current index doesn't exist in msg list
+  // decrement index, if order is 'back'
+  // index is last message in list if index is negative
+
+  // change state after index manipulation
+
   displayBannerMsg(index, order) {
-    // destruct state
     let { messages } = this.state
 
-    // increment index, if order is 'next'
     if (order === 'next') {
       index++
-      // initialize index
-      // if index is equal to msgs.length
       if (index === messages.length) { index = 0; }
     }
 
-    // if order is 'back', decrement index
     if (order === 'back') {
-      // decrement index
       index--;
-      // index is last message in list if index is negative
       if (index < 0) { index = messages.length - 1; }
     }
 
-    // change state after index manipulation
     this.setState({ messageIndex: index })
   }
 
@@ -49,11 +47,14 @@ export default class Universal_Banner extends React.Component {
     let { messages, messageIndex } = this.state;
     return (
       <div className="Univ_Banner">
+
         <BackArrow
           displayBannerMsg={this.displayBannerMsg}
           messageIndex={this.state.messageIndex}
         />
+
         <Messages message={messages[messageIndex]} />
+
         <NextArrow
           displayBannerMsg={this.displayBannerMsg}
           messageIndex={this.state.messageIndex}
