@@ -3,7 +3,7 @@ import React from 'react';
 const NextArrow = (props) => {
   return (
     <div className="arrow-link next">
-      <button onClick={() => props.displayBannerMsg(props.messageIndex, 'back')}> NEXT ARROW </button>
+      <button name="next" onClick={() => props.displayBannerMsg(props.messageIndex, 'next')}> NEXT ARROW </button>
     </div >
   )
 }
