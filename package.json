@@ -10,7 +10,7 @@
   "scripts": {
     "start": "nodemon server/index.js",
     "build": "webpack -d -w",
-    "test": "jest --updateSnapshot --coverage"
+    "test": "jest --coverage"
   },
   "dependencies": {
     "axios": "^0.19.2",
