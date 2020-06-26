@@ -1,5 +1,5 @@
 import React from 'react';
-import Women_Menu from './Women_Menu.jsx'
+import Women_Menu from './Women_Menu.jsx';
 
 export default class Women extends React.Component {
   constructor(props) {

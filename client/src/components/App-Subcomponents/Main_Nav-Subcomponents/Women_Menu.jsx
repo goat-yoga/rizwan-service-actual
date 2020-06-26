@@ -59,7 +59,7 @@ const Women_Menu = (props) => {
           <li className="main-nav__item">
             <a href="">Leggings</a></li>
           <li className="main-nav__item">
-            <a href="">7/8 Leggins</a></li>
+            <a href="">7/8 Leggings</a></li>
           <li className="main-nav__item">
             <a href="">Capris</a></li>
           <li className="main-nav__item">
