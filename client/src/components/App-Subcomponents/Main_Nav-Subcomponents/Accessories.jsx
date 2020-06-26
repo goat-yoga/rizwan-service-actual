@@ -1,5 +1,5 @@
 import React from 'react';
-import Accessories_Menu from './Accessories_Menu.jsx';
+import Accessories_Menu from './Menus/Accessories_Menu.jsx';
 
 export default class Accessories extends React.Component {
   constructor(props) {

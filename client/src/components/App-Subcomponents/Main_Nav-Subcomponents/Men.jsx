@@ -1,5 +1,5 @@
 import React from 'react';
-import Men_Menu from './Men_Menu.jsx';
+import Men_Menu from './Menus/Men_Menu.jsx';
 
 export default class Men extends React.Component {
   constructor(props) {
