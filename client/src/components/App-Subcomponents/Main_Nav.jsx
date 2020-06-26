@@ -1,5 +1,8 @@
 import React from 'react';
-import MenuElement from './Main_Nav-Subcomponents/MenuElement.jsx';
+import Women from './Main_Nav-Subcomponents/Women.jsx';
+import Men from './Main_Nav-Subcomponents/Men.jsx';
+import Accessories from './Main_Nav-Subcomponents/Accessories.jsx';
+import We_Are_Alo from './Main_Nav-Subcomponents/We_Are_Alo.jsx';
 import Search from './Main_Nav-Subcomponents/Search.jsx';
 import Authentication from './Main_Nav-Subcomponents/Authentication.jsx';
 import Cart from './Main_Nav-Subcomponents/Cart.jsx';
@@ -16,21 +19,21 @@ export default class Main_Nav extends React.Component {
         <h5>Main Nav goes here</h5>
 
         <div id="logo">
-          <img src="logo" alt="DISPLAY ALO-YOGA LOGO HERE" />
+          <a href=""> <img src="logo" alt="DISPLAY ALO-YOGA LOGO HERE" /> </a>
         </div>
 
         <div className="Main-Nav Menu-Choices">
           <ul>
-            <MenuElement name={"NEW IN"} />
-            <MenuElement name={"WOMEN"} />
-            <MenuElement name={"MEN"} />
-            <MenuElement name={"SALE"} />
+            <li className="main-nav__item"> <a href=""> {"NEW IN"} </a> </li>
+            <Women name={"WOMEN"} />
+            <Men name={"MEN"} />
+            <Accessories name={"ACCESSORIES"} />
           </ul>
         </div>
 
         <div className="Main-Nav we-are-alo">
           <ul>
-            <MenuElement name={"WE ARE ALO"} />
+            <We_Are_Alo name={"WE ARE ALO"} />
           </ul>
         </div>
 
@@ -42,7 +45,7 @@ export default class Main_Nav extends React.Component {
           </ul>
         </div>
 
-      </div>
+      </div >
     )
   }
 }
