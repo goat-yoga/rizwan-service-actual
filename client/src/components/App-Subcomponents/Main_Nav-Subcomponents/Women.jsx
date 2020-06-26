@@ -22,7 +22,7 @@ export default class Women extends React.Component {
         onMouseOut={this.handleHover}>
         <a href="">{this.props.name}</a>
 
-        {onHover ? <Women_Menu /> : null}
+        {onHover ? <Women_Menu /> : <div className="main-nav__menu"></div>}
       </li >
     )
   }

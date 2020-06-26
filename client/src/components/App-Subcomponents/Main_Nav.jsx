@@ -10,7 +10,35 @@ import Cart from './Main_Nav-Subcomponents/Cart.jsx';
 export default class Main_Nav extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+      hoveringOn: null,
+      showWomenMenu: false,
+      showMenMenu: false,
+      showAccessoriesMenu: false,
+      showWeAreAloMenu: false
+    }
+    this.hoveringOver = this.hoveringOver.bind(this);
+    this.stopHoveringOver = this.stopHoveringOver.bind(this);
+  }
+
+  hoveringOver(e) {
+    this.setState({ hoveringOn: [e.target.name] })
+    let { hoveringOn } = this.state
+    console.log(this.state);
+
+    if (hoveringOn === 'WOMEN') this.setState({ showWomenMenu: true });
+    if (hoveringOn === 'MEN') this.setState({ showMenMenu: true });
+    if (hoveringOn === 'ACCESSORIES') this.setState({ showAccessoriesMenu: true });
+    if (hoveringOn === 'WE ARE ALO') this.setState({ showWeAreAloMenu: true });
+  }
+
+  stopHoveringOver() {
+    this.setState({
+      showWomenMenu: false,
+      showMenMenu: false,
+      showAccessoriesMenu: false,
+      showWeAreAloMenu: false
+    });
   }
 
   render() {
@@ -25,15 +53,20 @@ export default class Main_Nav extends React.Component {
         <div className="Main-Nav Menu-Choices">
           <ul>
             <li className="main-nav__item"> <a href=""> {"NEW IN"} </a> </li>
-            <Women name={"WOMEN"} />
-            <Men name={"MEN"} />
-            <Accessories name={"ACCESSORIES"} />
+            <Women name={"WOMEN"} handleHover={this.handleHover} />
+            <Men name={"MEN"} handleHover={this.handleHover} />
+            <Accessories
+              name={"ACCESSORIES"}
+              onMouseOver={(e) => this.handleHover(e)}
+              onMouseOut={console.log(this.state)}
+              showMenu={this.state.showAccessoriesMenu}
+            />
           </ul>
         </div>
 
         <div className="Main-Nav we-are-alo">
           <ul>
-            <We_Are_Alo name={"WE ARE ALO"} />
+            <We_Are_Alo name={"WE ARE ALO"} handleHover={this.handleHover} />
           </ul>
         </div>
 
