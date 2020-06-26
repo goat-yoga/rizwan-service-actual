@@ -3,8 +3,8 @@ import React from 'react';
 const Men_Menu = (props) => {
   return (
     <div className="main-nav__menu">
-
       <div className="main-nav__column">
+
         <a href="">Get Inspired</a>
 
         <ul>
