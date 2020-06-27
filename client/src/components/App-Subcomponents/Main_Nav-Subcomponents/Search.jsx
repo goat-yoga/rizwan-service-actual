@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import SearchData from './Search/SearchData.jsx';
 
 export default class Search extends React.Component {
   constructor(props) {
@@ -28,11 +29,11 @@ export default class Search extends React.Component {
       })
   }
 
+  // fetches data based on search results
   handleSearch(e) {
     this.setState({ searchResults: e.target.value }, () => {
       setTimeout(() => {
         this.fetchSearchData();
-        console.log(this.state);
       }, 500);
     })
   }
@@ -40,19 +41,18 @@ export default class Search extends React.Component {
   render() {
     let { popularSuggestions, categories, pages, products } = this.state;
 
+    // TODO: fix products.length later if not searching for products
+    // TODO: change null in ternary operator if i'm getting weird error
+    let showSearch = (products.length > 0) ? <SearchData
+      data={this.state} /> :
+      <div className="results"></div>;
+
+
     return (
-      <li>
+      < li >
         <input type="search" placeholder="Search" onChange={(e) => this.handleSearch(e)} />
-        <div>
-          {popularSuggestions.map((suggestion) => {
-            return (<p></p>)
-          })
 
-
-
-
-          }
-        </div>
+        {showSearch}
       </li >
     )
   }
