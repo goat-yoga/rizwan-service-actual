@@ -19,6 +19,9 @@
 
 > Some usage instructions
 
+<!-- Regarding svgr/webpack -->
+I have .svg files which contains images. These images are transpiled into react components by svgr/webpack as devDependencies so that I can render svg files.
+
 ## Requirements
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
