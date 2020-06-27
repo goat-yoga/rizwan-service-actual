@@ -12,7 +12,6 @@ export default class Search extends React.Component {
       products: []
     }
     this.handleSearch = this.handleSearch.bind(this);
-    this.handleKeyPress = this.handleKeyPress.bind(this);
     this.fetchSearchData = this.fetchSearchData.bind(this);
   }
 
@@ -29,23 +28,31 @@ export default class Search extends React.Component {
       })
   }
 
-  // TODO: get rid of handleKeyPress later
-  // and implement fetchSearchData in this function
-  // handles changes to search input
   handleSearch(e) {
-    this.setState({ searchResults: e.target.value })
+    this.setState({ searchResults: e.target.value }, () => {
+      setTimeout(() => {
+        this.fetchSearchData();
+        console.log(this.state);
+      }, 500);
+    })
   }
 
-  // pressing enter displays data
-  handleKeyPress(e) {
-    if (event.key === 'Enter') { this.fetchSearchData() }
-  }
-
-  // TODO: Have to render dropdown menu with DB items when searching
   render() {
+    let { popularSuggestions, categories, pages, products } = this.state;
+
     return (
       <li>
-        <input type="search" placeholder="Search" onChange={(e) => this.handleSearch(e)} onKeyPress={(e) => this.handleKeyPress(e)} />
+        <input type="search" placeholder="Search" onChange={(e) => this.handleSearch(e)} />
+        <div>
+          {popularSuggestions.map((suggestion) => {
+            return (<p></p>)
+          })
+
+
+
+
+          }
+        </div>
       </li >
     )
   }
