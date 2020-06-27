@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import SearchData from './Search/SearchData.jsx';
 
 export default class Search extends React.Component {
   constructor(props) {
@@ -12,7 +13,6 @@ export default class Search extends React.Component {
       products: []
     }
     this.handleSearch = this.handleSearch.bind(this);
-    this.handleKeyPress = this.handleKeyPress.bind(this);
     this.fetchSearchData = this.fetchSearchData.bind(this);
   }
 
@@ -29,23 +29,30 @@ export default class Search extends React.Component {
       })
   }
 
-  // TODO: get rid of handleKeyPress later
-  // and implement fetchSearchData in this function
-  // handles changes to search input
+  // fetches data based on search results
   handleSearch(e) {
-    this.setState({ searchResults: e.target.value })
+    this.setState({ searchResults: e.target.value }, () => {
+      setTimeout(() => {
+        this.fetchSearchData();
+      }, 500);
+    })
   }
 
-  // pressing enter displays data
-  handleKeyPress(e) {
-    if (event.key === 'Enter') { this.fetchSearchData() }
-  }
-
-  // TODO: Have to render dropdown menu with DB items when searching
   render() {
+    let { popularSuggestions, categories, pages, products } = this.state;
+
+    // TODO: fix products.length later if not searching for products
+    // TODO: change null in ternary operator if i'm getting weird error
+    let showSearch = (products.length > 0) ? <SearchData
+      data={this.state} /> :
+      <div className="results"></div>;
+
+
     return (
-      <li>
-        <input type="search" placeholder="Search" onChange={(e) => this.handleSearch(e)} onKeyPress={(e) => this.handleKeyPress(e)} />
+      < li >
+        <input type="search" placeholder="Search" onChange={(e) => this.handleSearch(e)} />
+
+        {showSearch}
       </li >
     )
   }

@@ -6,3 +6,6 @@ border: 1px solid black
   border: 1px solid black
 }
 
+.label {
+  text-decoration: underline;
+}
