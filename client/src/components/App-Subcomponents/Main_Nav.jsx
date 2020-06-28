@@ -16,23 +16,22 @@ export default class Main_Nav extends React.Component {
 
   render() {
     return (
-      <div className="Main-Nav Menu">
+      <div className="main-nav-container">
 
         <div id="logo">
           <Logo />
         </div>
 
-        <div className="Main-Nav Menu-Choices">
-          <ul>
-            <li className="main-nav__item"> <a href=""> {"NEW IN"} </a> </li>
+        <div className="menu">
+          <ul className="menu-list">
+
+            <li className="main-nav__item">
+              <a className="main-nav__item-name" href="">NEW IN</a>
+            </li>
+
             <Women name={"WOMEN"} />
             <Men name={"MEN"} />
             <Accessories name={"ACCESSORIES"} />
-          </ul>
-        </div>
-
-        <div className="Main-Nav we-are-alo">
-          <ul>
             <We_Are_Alo name={"WE ARE ALO"} />
           </ul>
         </div>

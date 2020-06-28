@@ -18,21 +18,15 @@ export default class Accessories extends React.Component {
   render() {
     let { onHover } = this.state;
 
-    let menu = onHover ? <div className="main-nav__menu"
-      onMouseEnter={this.handleHover}
-    >
-      <Accessories_Menu />
-    </div > : <div className="main-nav__menu"></div>
+    let menu = onHover ? <div className="main-nav__menu" onMouseEnter={this.handleHover} > <Accessories_Menu /></div > : <div className="main-nav__menu"></div>
 
     return (
       <li className="main-nav__item"
         onMouseOver={this.handleHover}
         onMouseLeave={this.outOfHover}>
-
-        <a href="">{this.props.name}</a>
-
+        <a className="main-nav__item-name" href="">{this.props.name}</a>
         {menu}
-      </li>
+      </li >
     )
   }
 }
