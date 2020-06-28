@@ -5,55 +5,38 @@ export default class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectShop: true,
-      selectAloMoves: false,
-      selectAloGives: false,
-      selectStores: false
+      selection: "SHOP"
     }
-    this.headerSelected = this.headerSelected.bind(this);
+    this.headerSelection = this.headerSelection.bind(this);
   }
 
-  headerSelected(headerItem, selection) {
-    if (headerItem === "SHOP") selection = 'selectShop';
-    if (headerItem === "ALO MOVES") selection = 'selectAloMoves';
-    if (headerItem === "ALO GIVES") selection = 'selectAloGives';
-    if (headerItem === "STORES & STUDIOS") selection = 'selectStores';
-
-    this.setState({
-      selectShop: false,
-      selectAloMoves: false,
-      selectAloGives: false,
-      selectStores: false
-    })
-
-    this.setState({ selection: true }, () => { console.log(this.state) })
-  }
+  headerSelection(name) { this.setState({ selection: name }) }
 
   render() {
-    let { selectShop, selectAloMoves, selectAloGives, selectStores } = this.state;
+    let { selection } = this.state;
 
     return (
       <div className="header-container">
         <ul className="header-items-list">
           <HeaderElement
             name={'SHOP'}
-            selected={selectShop}
-            headerSelected={this.headerSelected}
+            selection={selection}
+            headerSelection={this.headerSelection}
           />
           <HeaderElement
             name={'ALO MOVES'}
-            selected={selectAloMoves}
-            headerSelected={this.headerSelected}
+            selection={selection}
+            headerSelection={this.headerSelection}
           />
           <HeaderElement
             name={'ALO GIVES'}
-            selected={selectAloGives}
-            headerSelected={this.headerSelected}
+            selection={selection}
+            headerSelection={this.headerSelection}
           />
           <HeaderElement
             name={'STORES & STUDIOS'}
-            selected={selectStores}
-            headerSelected={this.headerSelected}
+            selection={selection}
+            headerSelection={this.headerSelection}
           />
           <li className="header-message">Free 1-2 Day Shipping to California</li>
         </ul>
