@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeaderElement = (props) => {
   return (
-    <li>{props.name}</li>
+    <li className="header-item">{props.name}</li>
   )
 }
 

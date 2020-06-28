@@ -47,7 +47,6 @@ body {
 .arrow-link {
   cursor: pointer;
   display: flex;
-  background-color: #aebae1;
 }
 
 button.nextButton {
@@ -60,4 +59,35 @@ button.backButton {
   margin-left: 20px;
   background-color: #aebae1;
   border: none;
+}
+
+/* gets rid of highlight after user's click */
+button.backButton:focus, button.nextButton:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* ========================================================
+   Header
+======================================================== */
+
+.header-container {
+  background: black;
+}
+
+.header-items-list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.header-item {
+  display: inline-flex;
+  padding: 15px 20px;
+}
+
+/* Moves the '1-2 day shipping' message ONLY to the right */
+.header-item:nth-child(5) {
+  position: relative;
+  float: right;
 }

@@ -9,12 +9,13 @@ export default class Header extends React.Component {
 
   render() {
     return (
-      <div className="Header">
-        <ul>
+      <div className="header-container">
+        <ul className="header-items-list">
           <HeaderElement name={'SHOP'} />
           <HeaderElement name={'ALO MOVES'} />
           <HeaderElement name={'ALO GIVES'} />
           <HeaderElement name={'STORES & STUDIOS'} />
+          <li className="header-item">Free 1-2 Day Shipping to California</li>
         </ul>
       </div>
     )
