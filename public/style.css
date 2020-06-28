@@ -84,10 +84,21 @@ button.backButton:focus, button.nextButton:focus {
 .header-item {
   display: inline-flex;
   padding: 15px 20px;
+  cursor: pointer;
+}
+
+.header-item.selected {
+  background: white;
 }
 
 /* Moves the '1-2 day shipping' message ONLY to the right */
-.header-item:nth-child(5) {
+.header-message {
   position: relative;
   float: right;
+  padding: 15px 20px;
+  cursor: default;
+}
+
+.header-item:hover {
+  background: rgba(255, 255, 255, 0.25);
 }
