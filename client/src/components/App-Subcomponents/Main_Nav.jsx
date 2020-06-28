@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from './Logo.svg';
 import Women from './Main_Nav-Subcomponents/Women.jsx';
 import Men from './Main_Nav-Subcomponents/Men.jsx';
 import Accessories from './Main_Nav-Subcomponents/Accessories.jsx';
@@ -16,10 +17,9 @@ export default class Main_Nav extends React.Component {
   render() {
     return (
       <div className="Main-Nav Menu">
-        <h5>Main Nav goes here</h5>
 
         <div id="logo">
-          <a href=""> <img src="logo" alt="DISPLAY ALO-YOGA LOGO HERE" /> </a>
+          <Logo />
         </div>
 
         <div className="Main-Nav Menu-Choices">
