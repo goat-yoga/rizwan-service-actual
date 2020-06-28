@@ -4,7 +4,7 @@ import NextButton from './nextArrow.svg';
 const NextArrow = (props) => {
   return (
     <div className="arrow-link next">
-      <button name="next" onClick={() => props.displayBannerMsg(props.messageIndex, 'next')}>
+      <button className="nextButton" onClick={() => props.displayBannerMsg(props.messageIndex, 'next')}>
         <NextButton />
       </button>
     </div >

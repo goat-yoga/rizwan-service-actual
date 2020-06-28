@@ -2,7 +2,7 @@ import React from 'react';
 
 const Messages = (props) => {
   return (
-    <div className="Univ_Banner Message">
+    <div className="univ-banner message">
       <p>{props.message}</p>
     </div>
   )

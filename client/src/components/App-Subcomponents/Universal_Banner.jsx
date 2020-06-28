@@ -46,8 +46,7 @@ export default class Universal_Banner extends React.Component {
   render() {
     let { messages, messageIndex } = this.state;
     return (
-      <div className="Univ-Banner">
-        <h5>Universal Banner goes here</h5>
+      <div className="univ-banner-container">
         <BackArrow
           displayBannerMsg={this.displayBannerMsg}
           messageIndex={this.state.messageIndex}

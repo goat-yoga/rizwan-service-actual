@@ -2,10 +2,62 @@
 border: 1px solid black
 }
 
-.Univ-Banner, .Header {
+.Header {
   border: 1px solid black
 }
 
 .label {
   text-decoration: underline;
+}
+
+/* ========================================================
+   Body
+======================================================== */
+
+:root {
+  --main-bg-color: coral;
+  --font-body: 'Cabin', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: .9375rem;
+    line-height: 1.2;
+    color: #fff;
+    background-color: #fff;
+    margin: 0;
+}
+
+/* ========================================================
+   Universal Banner
+======================================================== */
+
+.univ-banner-container {
+  position: relative;
+  background-color: #aebae1;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.univ-banner.message {
+  display: flex;
+}
+
+.arrow-link {
+  cursor: pointer;
+  display: flex;
+  background-color: #aebae1;
+}
+
+button.nextButton {
+  margin-right: 20px;
+  background-color: #aebae1;
+  border: none;
+}
+
+button.backButton {
+  margin-left: 20px;
+  background-color: #aebae1;
+  border: none;
 }
