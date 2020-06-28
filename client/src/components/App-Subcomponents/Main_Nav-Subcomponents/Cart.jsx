@@ -1,7 +1,7 @@
 import React from 'react';
 import DefaultCartLogo from './Cart/Cart_NoHover.svg';
 import HoverCartLogo from './Cart/Cart_Hover.svg';
-
+import CartMenu from './Cart/CartMenu.jsx';
 
 export default class Cart extends React.Component {
   constructor(props) {
@@ -9,19 +9,28 @@ export default class Cart extends React.Component {
     this.state = {
       cartOnHover: false
     }
-    this.hoveringOverCart = this.hoveringOverCart.bind(this);
+    this.hover = this.hover.bind(this);
+    this.noHover = this.noHover.bind(this);
   }
 
-  hoveringOverCart() { this.setState({ cartOnHover: false }) }
+  hover() { this.setState({ cartOnHover: true }) }
 
-  notHoveringOnCart() { this.setState({ cartOnHover: true }) }
+  noHover() { this.setState({ cartOnHover: false }) }
 
   render() {
-    return (
-      <li>
+    let { cartOnHover } = this.state;
+
+    let cartStatus = !cartOnHover ?
+      <div onMouseOver={this.hover} onMouseLeave={this.noHover} >
         <DefaultCartLogo />
+      </div > :
+      <div onMouseOver={this.hover} onMouseLeave={this.noHover} >
         <HoverCartLogo />
-      </li>
+        <CartMenu />
+      </div>;
+
+    return (
+      <li> {cartStatus} </li>
     )
   }
 }
