@@ -21,16 +21,11 @@ export default class Cart extends React.Component {
     let { cartOnHover } = this.state;
 
     let cartStatus = !cartOnHover ?
-      <div onMouseOver={this.hover} onMouseLeave={this.noHover} >
-        <DefaultCartLogo />
-      </div > :
-      <div onMouseOver={this.hover} onMouseLeave={this.noHover} >
-        <HoverCartLogo />
-        <CartMenu />
-      </div>;
+      <div className="cart-container"> <DefaultCartLogo /> </div > :
+      <div className="cart-container hover"> <HoverCartLogo /><CartMenu /> </div>;
 
     return (
-      <li> {cartStatus} </li>
+      <li onMouseOver={this.hover} onMouseLeave={this.noHover}> {cartStatus} </li>
     )
   }
 }

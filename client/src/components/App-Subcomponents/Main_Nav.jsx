@@ -18,7 +18,7 @@ export default class Main_Nav extends React.Component {
     return (
       <div className="main-nav-container">
 
-        <div id="logo">
+        <div className="main-nav-logo">
           <Logo />
         </div>
 

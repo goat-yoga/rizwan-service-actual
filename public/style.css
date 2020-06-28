@@ -97,14 +97,23 @@ button.backButton:focus, button.nextButton:focus {
    Main Navigation - Logo & Menu List
 ======================================================== */
 
+/* align-item: center -> dropdown menu looking funky */
 .main-nav-container {
   display: flex;
+  align-items: center;
+  height: 80px;
+  border-bottom: 0.5px solid rgb(222, 222, 222);
+}
+
+.main-nav-logo {
+  margin-right: 10px;
 }
 
 .menu-list {
   list-style-type: none;
   display: flex;
   flex-direction: row;
+  padding-left: 0px;
 }
 
 .main-nav__item {
@@ -115,11 +124,12 @@ button.backButton:focus, button.nextButton:focus {
   cursor: pointer;
   transition: 300ms;
   border-bottom: 1px solid transparent;
+  margin-top: 14px;
 }
 
 .main-nav__item-name {
   transition: 400ms;
-  border-bottom: 1px solid transparent;
+  border-bottom: 3px solid transparent;
   color: black;
   text-decoration: none;
 }
@@ -133,5 +143,40 @@ button.backButton:focus, button.nextButton:focus {
 ======================================================== */
 
 /* ========================================================
-   Main Navigation - Other modules
+   Main Navigation - Cart
 ======================================================== */
+
+.cart-container {
+  padding: 12px;
+}
+
+.cart-block-inner {
+    max-height: 43vh;
+    overflow-y: auto;
+    padding: 0 20px 20px;
+    font-size: 14px;
+}
+
+.cart-status, .cart-list {
+  color: black;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.cart-status {
+  margin: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+.cart-list {
+  list-style-type: none;
+  padding: 10px;
+  margin: 20px;
+}
+
+.item__cart:hover .cart-block, .rect__wrapper, .main-navbar__icon--bag:hover .cart-block, .main-navbar__icon--bag:hover .rect__wrapper {
+    opacity: 1;
+    visibility: visible;
+}
