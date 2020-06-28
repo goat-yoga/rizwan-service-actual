@@ -38,27 +38,21 @@ body {
   display: flex;
   justify-content: space-between;
   height: 50px;
-}
-
-.univ-banner.message {
-  display: flex;
-}
-
-.arrow-link {
-  cursor: pointer;
-  display: flex;
+  cursor: default;
 }
 
 button.nextButton {
   margin-right: 20px;
   background-color: #aebae1;
   border: none;
+  cursor: pointer;
 }
 
 button.backButton {
   margin-left: 20px;
   background-color: #aebae1;
   border: none;
+  cursor: pointer;
 }
 
 /* gets rid of highlight after user's click */
@@ -87,8 +81,10 @@ button.backButton:focus, button.nextButton:focus {
   cursor: pointer;
 }
 
+/* header item being selected has different style */
 .header-item.selected {
   background: white;
+  color: black;
 }
 
 /* Moves the '1-2 day shipping' message ONLY to the right */
@@ -99,6 +95,7 @@ button.backButton:focus, button.nextButton:focus {
   cursor: default;
 }
 
-.header-item:hover {
+/* on hover, change non-selected header items color */
+.not-selected:hover {
   background: rgba(255, 255, 255, 0.25);
 }
