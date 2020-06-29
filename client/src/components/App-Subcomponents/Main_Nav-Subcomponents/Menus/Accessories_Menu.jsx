@@ -2,12 +2,12 @@ import React from 'react';
 
 const Accessories_Menu = (props) => {
   return (
-    <div className="main-nav__menu">
+    <div className="main-nav__menu-container">
       <div className="main-nav__column">
 
-        <a href="">Accessories</a>
+        <div className="main-nav__column-title" href="">Accessories</div>
 
-        <ul>
+        <ul className="flex-column">
           <li className="main-nav__item">
             <a href="">Gift Card</a></li>
           <li className="main-nav__item">
@@ -24,6 +24,7 @@ const Accessories_Menu = (props) => {
 
       </div>
     </div>
+
   )
 }
 

@@ -13,16 +13,16 @@ class Cart_Menu extends React.Component {
 
     let cartStatus = (cartItems.length === 0) ? "YOUR BAG IS EMPTY" : `YOUR CART HAS ${cartItems.length} ITEMS`;
 
-    let cartList = (cartItems.length === 0) ? <li>"Free worldwide shipping and easy returns" </li> :
+    let cartList = (cartItems.length === 0) ? <li>Free worldwide shipping and easy returns</li> :
       cartItems.map(item => {
         return (<li>{item}</li>)
       })
 
     return (
-      <div className="cart-menu">
+      <div className="cart-block-inner">
         <div className="cart-status">{cartStatus}</div>
-        <div className="cart-list">
-          <ul>
+        <div>
+          <ul className="cart-list">
             {cartList}
           </ul>
         </div>

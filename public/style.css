@@ -8,7 +8,7 @@
 
 :root {
   --main-bg-color: coral;
-  --font-body: 'Cabin', sans-serif;
+  --font-body: 'Merriweather', serif;;
 }
 
 body {
@@ -116,27 +116,72 @@ button.backButton:focus, button.nextButton:focus {
   padding-left: 0px;
 }
 
-.main-nav__item {
-  color: black;
+.main-nav__title {
   padding: 25px 10px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 300ms;
-  border-bottom: 1px solid transparent;
-  margin-top: 14px;
 }
 
-.main-nav__item-name {
-  transition: 400ms;
-  border-bottom: 3px solid transparent;
+.main-nav__title-name {
+  padding: 6px 0;
   color: black;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 300ms;
+  border-bottom: 3px solid transparent;
+  margin-top: 14px;
   text-decoration: none;
 }
 
-.main-nav__item-name:hover {
+.main-nav__title-name:hover {
   border-color: black;
+  bottom: 10px;
 }
+
+.main-nav__menu-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 100vw;
+  top: 200px;
+  left: 0;
+  padding: 50px;
+  border-bottom: 0.5px solid rgb(222, 222, 222);
+}
+
+.main-nav__column-title {
+  padding: 4px;
+}
+
+.main-nav__column-title, .main-nav__item a {
+  color: black;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.main-nav__item {
+  padding: 6px 0;
+  margin-left: -37px;
+  font-weight: 300;
+  width: 165px;
+}
+
+.special-sale {
+  margin-top: 15px;
+  font-weight: 400;
+}
+
+/*
+.flex-column {
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+}
+
+.flex-row {
+  flex-direction: row;
+  list-style-type: none;
+  padding: 0;
+} */
 
 /* ========================================================
    Main Navigation - Search
@@ -174,9 +219,4 @@ button.backButton:focus, button.nextButton:focus {
   list-style-type: none;
   padding: 10px;
   margin: 20px;
-}
-
-.item__cart:hover .cart-block, .rect__wrapper, .main-navbar__icon--bag:hover .cart-block, .main-navbar__icon--bag:hover .rect__wrapper {
-    opacity: 1;
-    visibility: visible;
 }
