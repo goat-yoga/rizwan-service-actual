@@ -197,6 +197,18 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   align-items: center;
 }
 
+.nav-icons li {
+  padding: 15px 15px 23px 15px
+}
+
+/* ========================================================
+   Main Navigation - We Are Alo - special
+======================================================== */
+
+.we-are-alo-ul li {
+  padding: 6px 0;
+}
+
 /* ========================================================
    Main Navigation - Search
 ======================================================== */
@@ -262,6 +274,93 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
 /* ========================================================
    Main Navigation - Authentication
 ======================================================== */
+
+.auth-menu-container {
+  position: absolute;
+  background: white;
+  display: block;
+  text-align: center;
+  border: 1px solid #979797;
+  width: 353px;
+  padding: 0 20px 34px 20px;
+}
+
+.auth-menu-container.hidden {
+  visibility: hidden;
+  height: 50vh;
+}
+
+.auth-header {
+  font-size: 20px;
+  color: black;
+  padding: 24px 0 16px 0;
+}
+
+.auth-input {
+  text-align: center;
+  padding-bottom: 2px;
+}
+
+.auth-input input {
+  display: block;
+  width: 100%;
+  padding: .5rem .75rem;
+  font-size: 1rem;
+  line-height: 1.2;
+  height: 19px;
+  width: 327px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #dedede;
+}
+
+.auth-forgot-password {
+  text-align: left;
+  color: black;
+  font-size: 12px;
+  margin: 6px 0;
+}
+
+.auth-forgot-password:hover {
+  color: rgb(87, 87, 87);
+  text-decoration: underline;
+}
+
+.auth-button {
+  padding: 10px 16px;
+  background: black;
+  color: white;
+  width: 355px;
+  height: 40px;
+}
+
+.auth-submit {
+  margin-bottom: 8px;
+  border-bottom: 0.5px solid hsl(0, 0%, 50%);
+}
+
+.auth-social {
+  padding-top: 25px;
+  padding-bottom: 15px;
+  border-bottom: 0.5px solid hsl(0, 0%, 50%);
+  margin-bottom: 25px;
+}
+
+.auth-social button {
+  border-color: #2d5073;
+  background-color: #e0dfdf;
+  height: 40px;
+  display: block;
+  background-size: 40px 40px;
+  border-radius: 0px;
+  color: black;
+  font-size: 14px;
+  margin-bottom: 10px;
+  padding-bottom: 4px;
+  line-height: 40px;
+  width: 353px;
+  font-weight: 700;
+}
 
 
 /* ========================================================

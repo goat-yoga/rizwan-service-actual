@@ -5,7 +5,7 @@ const We_Are_Alo_Menu = (props) => {
     <div className="main-nav__menu-container">
       <div className="main-nav__column">
 
-        <ul className="flex-column">
+        <ul className="flex-column we-are-alo-ul">
           <li className="main-nav__item">
             <a href="">About Us</a></li>
           <li className="main-nav__item">

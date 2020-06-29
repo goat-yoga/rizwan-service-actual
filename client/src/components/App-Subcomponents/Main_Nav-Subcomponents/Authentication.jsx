@@ -1,6 +1,7 @@
 import React from 'react';
 import NormalAuth from './Authentication/Auth-regular.svg';
 import HoveredAuth from './Authentication/Auth-hovered.svg';
+import AuthMenu from './Authentication/AuthMenu.jsx';
 
 export default class Authentication extends React.Component {
   constructor(props) {
@@ -19,21 +20,26 @@ export default class Authentication extends React.Component {
   render() {
     let { isClicked } = this.state;
 
-    let AuthStatus =
-      (!isClicked) ?
-        <div class="auth-logo">
-          <NormalAuth />
-        </div> :
+    let AuthStatus = (!isClicked) ?
 
-        <div class="auth-logo selected">
+      <div className="auth-logo">
+        <NormalAuth />
+        <div className="auth-menu-container hidden"></div>
+      </div> :
+
+      <div>
+        <div className="auth-logo selected-icon"
+          onClick={() => { this.elementIsNotClicked() }}>
           <HoveredAuth />
-        </div>;
-
+        </div>
+        <div className="auth-menu-container"> <AuthMenu /> </div>
+      </div>;
 
     return (
-      <li >
+      <div onClick={() => { this.elementIsClicked() }}>
         {AuthStatus}
-      </li>
+      </div>
     )
   }
+
 }
