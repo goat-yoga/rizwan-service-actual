@@ -35,8 +35,8 @@ export default class Main_Nav extends React.Component {
           </ul>
         </div>
 
-        <div className="Main-Nav Navbar-icons">
-          <ul className="nav-icons">
+        <div className="Main-Nav navbar-icons">
+          <ul className="nav-icons-list">
             <We_Are_Alo name={"WE ARE ALO"} />
             <Search />
             <Authentication />

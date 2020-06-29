@@ -2,7 +2,7 @@ import React from 'react';
 
 const We_Are_Alo_Menu = (props) => {
   return (
-    <div className="main-nav__menu-container">
+    <div className="main-nav__menu-container we-are-alo-container">
       <div className="main-nav__column">
 
         <ul className="flex-column we-are-alo-ul">

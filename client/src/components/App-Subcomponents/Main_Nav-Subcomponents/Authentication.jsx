@@ -14,7 +14,6 @@ export default class Authentication extends React.Component {
   }
 
   elementIsClicked() { this.setState({ isClicked: true }) }
-
   elementIsNotClicked() { this.setState({ isClicked: false }) }
 
   render() {
@@ -28,17 +27,16 @@ export default class Authentication extends React.Component {
       </div> :
 
       <div>
-        <div className="auth-logo selected-icon"
-          onClick={() => { this.elementIsNotClicked() }}>
+        <div className="auth-logo selected-icon">
           <HoveredAuth />
         </div>
         <div className="auth-menu-container"> <AuthMenu /> </div>
       </div>;
 
     return (
-      <div onClick={() => { this.elementIsClicked() }}>
+      <li onClick={this.elementIsClicked}>
         {AuthStatus}
-      </div>
+      </li>
     )
   }
 
