@@ -32,12 +32,12 @@ export default class Main_Nav extends React.Component {
             <Women name={"WOMEN"} />
             <Men name={"MEN"} />
             <Accessories name={"ACCESSORIES"} />
-            <We_Are_Alo name={"WE ARE ALO"} />
           </ul>
         </div>
 
         <div className="Main-Nav Navbar-icons">
-          <ul>
+          <ul className="nav-icons">
+            <We_Are_Alo name={"WE ARE ALO"} />
             <Search />
             <Authentication />
             <Cart />
