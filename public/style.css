@@ -367,7 +367,7 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
 .auth-menu-container {
   position: absolute;
   top: 64px;
-  left: 183px;
+  left: 233px;
   background: white;
   display: block;
   text-align: center;
@@ -479,7 +479,7 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   background: white;
   border: 1px solid #979797;
   top: 64px;
-  left: 230px;
+  left: 280px;
   max-height: 43vh;
   padding: 0 20px 20px;
   font-size: 14px;
