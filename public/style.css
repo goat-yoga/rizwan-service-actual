@@ -119,11 +119,12 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
 }
 
 .main-nav__title {
-  padding: 25px 20px;
+  padding: 32px 0 22px 0;
 }
 
 .main-nav__title-name {
-  padding: 6px 0;
+  padding: 12px;
+  padding-bottom: 4px;
   color: black;
   font-size: 16px;
   font-weight: 700;
@@ -138,10 +139,13 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   width: 90px;
 }
 
-
 .main-nav__title-name:hover {
   border-color: black;
   bottom: 10px;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .main-nav__menu-container {
@@ -149,8 +153,9 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   flex-direction: row;
   position: absolute;
   width: 94vw;
-  top: 200px;
+  top: 150px;
   left: 42px;
+  padding-top: 50px;
   padding-bottom: 50px;
   border-bottom: 0.5px solid rgb(222, 222, 222);
 }
@@ -196,11 +201,9 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
 ======================================================== */
 
 .navbar-icons {
+  top: 5px;
   position: relative;
-  margin-left:50px;
   width: 60vw;
-  /* display: flex; */
-  /* justify-content: flex-end; */
 }
 
 .nav-icons-list {
@@ -213,7 +216,7 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
 }
 
 .nav-icons-list li {
-  padding: 0 12px;
+  padding: 0 6px;
 }
 
 /* ========================================================
@@ -229,8 +232,8 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   flex-direction: row;
   position: absolute;
   width: 94vw;
-  top: 106px;
-  left: -554px;
+  top: 44px;
+  left: -664px;
   padding-bottom: 50px;
   border-bottom: 0.5px solid rgb(222, 222, 222);
 }
@@ -309,7 +312,7 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
 .auth-menu-container {
   position: absolute;
   top: 64px;
-  left: 322px;
+  left: 183px;
   background: white;
   display: block;
   text-align: center;
@@ -421,9 +424,8 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   background: white;
   border: 1px solid #979797;
   top: 64px;
-  left: 369px;
+  left: 230px;
   max-height: 43vh;
-  overflow-y: hidden;
   padding: 0 20px 20px;
   font-size: 14px;
 }

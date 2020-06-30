@@ -24,7 +24,7 @@ export default class We_Are_Alo extends React.Component {
       <li className="main-nav__title"
         onMouseOver={this.handleHover}
         onMouseLeave={this.outOfHover}>
-        <a className="main-nav__title-name" href="">{this.props.name}</a>
+        <a className="main-nav__title-name we-are-alo" href="">{this.props.name}</a>
         {menu}
       </li >
     )
