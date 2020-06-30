@@ -26,9 +26,13 @@ const SearchData = (props) => {
         <li className="result-label">Products</li>
         {products.map((product, index) => {
           return (<li className="search-products" key={index}>
-            <img src={product.image} className="product-image" alt="product pic" />
-            <div>{product.name}</div>
-            <div>{product.price}</div>
+            <span className="search-products-thumbnail">
+              <img src={product.image} className="search-products-image" alt="product pic" />
+            </span>
+            <span className="search-products-info">
+              <span className="search-products-name">{product.name}</span>
+              <span className="search-products-price">{product.price}</span>
+            </span>
           </li>)
         })}
       </ul>

@@ -281,6 +281,11 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   padding: 0;
 }
 
+.search-results.empty {
+  color: black;
+  padding: 10px;
+}
+
 .search-results ul {
   padding: 0;
 }
@@ -307,6 +312,48 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   border-bottom: 1px solid #eeeeee;
   background: #f7f7f7;
   cursor: auto;
+}
+
+.search-products {
+  min-height: 80px;
+}
+
+.search-products-thumbnail {
+  display: inline-block;
+  float: left;
+  margin: 5px 10px 5px 0px;
+  text-align: center;
+  width: 70px;
+}
+
+.search-products-image {
+  display: inline;
+  vertical-align: middle;
+  max-width: 70px;
+  max-height: 70px;
+}
+
+.search-products-info {
+  overflow: hidden;
+  display: block;
+}
+
+.search-products-name {
+  display: block;
+  color: black;
+  font-weight: bold;
+  font-size: 100%;
+  margin-top: 3px;
+  letter-spacing: 0.8px!important;
+  text-decoration: uppercase;
+}
+
+.search-products-price{
+  float: left;
+  margin-top: 6px;
+  color: black;
+  font-weight: bold;
+  font-size: 115%;
 }
 
 .bolded {

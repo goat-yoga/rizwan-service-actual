@@ -7,7 +7,7 @@ const HeaderElement = (props) => {
   let className = (selection === name) ? "header-item selected" : "header-item not-selected";
 
   return (
-    <li className={className} onClick={() => { headerSelection(name) }}>\
+    <li className={className} onClick={() => { headerSelection(name) }}>
       {props.name}
     </li>
   )

@@ -48,12 +48,9 @@ export default class Search extends React.Component {
   hideSearch() { this.setState({ searchWasClicked: false }) }
 
   render() {
-    let { popularSuggestions, categories, pages, products, searchWasClicked } = this.state;
+    let { searchResults, popularSuggestions, categories, pages, products, searchWasClicked } = this.state;
 
-    let showSearch = (products.length > 0) ?
-      <SearchData data={this.state} /> : null;
-
-    // toggles between search icon based on
+    // toggles between icon based on icon click
     let SearchIcon =
       (!searchWasClicked) ?
         <div className="search-logo" onClick={this.showSearch}>
@@ -67,6 +64,15 @@ export default class Search extends React.Component {
 
     // imput field is not shown if icon not clicked, else field is rendered.
     let InputField = !searchWasClicked ? null : <input className="search-input-field" type="search" placeholder="Search" onChange={(e) => this.handleSearch(e)} />;
+
+    // show search results based on what was searched or if icon is active
+    let showSearch = (searchResults.length > 0) ?
+      <SearchData data={this.state} /> :
+
+      (searchWasClicked) ?
+        <div className="search-results empty">
+          <em>Start typing for instant search results</em>
+        </div> : null;
 
     return (
       < li className="icon-search-bar">
