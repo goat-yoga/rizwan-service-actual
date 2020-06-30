@@ -52,5 +52,6 @@ const mongoose = require('mongoose');
       seedItemsIntoModel(allCategories, categoryModel);
       seedItemsIntoModel(allPages, pagesModel);
     })
+    catch (err) { console.error(err) }
 
 })();

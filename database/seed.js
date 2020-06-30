@@ -1,44 +1,21 @@
 const faker = require('faker');
 
-// create 100 products
-let createProducts = () => {
-  let array = [];
+// misc === miscellaneous fyi :)
 
-  // creates obj w/ fake names, price btw/ 50-150 & img
-  for (let i = 0; i < 100; i++) {
-
-    let productObj = {
-      name: faker.commerce.product(),
-      price: Math.floor(Math.random() * 100) + 50,
-      img: faker.image.fashion()
-    };
-
-    array.push(productObj);
-  }
-
-  return array;
-}
-
-// create 15 pages for popular suggestions
-// create 15 pages for category
-// create 15 pages for pages
+// create 15 pages for 3 models: popular suggestions, category, pages
 let createMiscPages = () => {
-  let array = [];
 
-  // creates obj w/ fake data,
-  for (let i = 0; i < 15; i++) {
+  let miscList = [];
 
-    let productObj = {
-      page_name: faker.commerce.product(),
-    };
-
-    array.push(productObj);
+  for (let i = 0; i < 40; i++) {
+    let productObj = { page_name: faker.commerce.product() };
+    miscList.push(productObj);
   }
 
-  return array;
+  return miscList;
 }
 
 // create obj holding created methods
-let seedMethods = { createProducts, createMiscPages }
+let seedMethods = { createMiscPages }
 
 module.exports = seedMethods;
