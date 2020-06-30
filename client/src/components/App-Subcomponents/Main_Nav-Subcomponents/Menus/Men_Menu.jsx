@@ -5,7 +5,9 @@ const Men_Menu = (props) => {
     <div className="main-nav__menu-container">
       <div className="main-nav__column">
 
-        <div className="main-nav__column-title">Get Inspired</div>
+        <div className="main-nav__column-title">
+          <a href="">Get Inspired</a>
+        </div>
 
         <ul className="flex-column">
           <li className="main-nav__item">
@@ -21,7 +23,9 @@ const Men_Menu = (props) => {
 
       <div className="main-nav__column">
 
-        <div className="main-nav__column-title">Tops</div>
+        <div className="main-nav__column-title">
+          <a href="">Tops</a>
+        </div>
 
         <ul className="flex-column">
           <li className="main-nav__item">
@@ -35,7 +39,9 @@ const Men_Menu = (props) => {
 
       <div className="main-nav__column">
 
-        <div className="main-nav__column-title">Bottoms</div>
+        <div className="main-nav__column-title">
+          <a href="">Bottoms</a>
+        </div>
 
         <ul className="flex-column">
           <li className="main-nav__item">
@@ -51,7 +57,9 @@ const Men_Menu = (props) => {
 
       <div className="main-nav__column">
 
-        <div className="main-nav__column-title">Outerwear</div>
+        <div className="main-nav__column-title">
+          <a href="">Outerwear</a>
+        </div>
 
         <ul className="flex-column">
           <li className="main-nav__item">
@@ -64,7 +72,9 @@ const Men_Menu = (props) => {
 
       <div className="main-nav__column">
 
-        <div className="main-nav__column-title">Accessories</div>
+        <div className="main-nav__column-title">
+          <a href="">Accessories</a>
+        </div>
 
         <ul className="flex-column">
           <li className="main-nav__item">

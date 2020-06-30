@@ -4,7 +4,7 @@ const SearchData = (props) => {
   let { popularSuggestions, categories, pages, products } = props.data;
 
   return (
-    <div className="results">
+    <div className="search-results">
       {console.log(products)}
       <ul>
 
@@ -15,20 +15,20 @@ const SearchData = (props) => {
 
         <li className="result-label">Categories</li>
         {categories.map((category, index) => {
-          return (<li className="search-categories" key={index}>{category.page_name}</li>)
+          return (<li className="search-categories bolded" key={index}>{category.page_name}</li>)
         })}
 
         <li className="result-label">Pages</li>
         {pages.map((page, index) => {
-          return (<li className="search-pages" key={index}>{page.page_name}</li>)
+          return (<li className="search-pages" key={index}>#{page.page_name}</li>)
         })}
 
         <li className="result-label">Products</li>
         {products.map((product, index) => {
           return (<li className="search-products" key={index}>
-            <a href={product.image} className="products-image"></a>
-            <p>{product.name}</p>
-            <p>{product.price}</p>
+            <img src={product.image} className="product-image" alt="product pic" />
+            <div>{product.name}</div>
+            <div>{product.price}</div>
           </li>)
         })}
       </ul>

@@ -5,7 +5,9 @@ const Women_Menu = (props) => {
     <div className="main-nav__menu-container">
       <div className="main-nav__column">
 
-        <div className="main-nav__column-title">Get Inspired</div>
+        <div className="main-nav__column-title">
+          <a href="">Get Inspired</a>
+        </div>
 
         <ul className="flex-column">
           <li className="main-nav__item">
@@ -35,7 +37,9 @@ const Women_Menu = (props) => {
 
       <div className="main-nav__column">
 
-        <div className="main-nav__column-title">Bras & Tops</div>
+        <div className="main-nav__column-title">
+          <a href="">Bras & Tops</a>
+        </div>
 
         <ul className="flex-column">
           <li className="main-nav__item">
@@ -55,8 +59,9 @@ const Women_Menu = (props) => {
 
       <div className="main-nav__column">
 
-        <div className="main-nav__column-title">Bottoms</div>
-
+        <div className="main-nav__column-title">
+          <a href="">Bottoms</a>
+        </div>
 
         <ul className="flex-column">
           <li className="main-nav__item">
@@ -76,7 +81,9 @@ const Women_Menu = (props) => {
 
       <div className="main-nav__column">
 
-        <div className="main-nav__column-title">Jackets & Coverups</div>
+        <div className="main-nav__column-title">
+          <a href="">Jackets & Coverups</a>
+        </div>
 
         <ul className="flex-column">
           <li className="main-nav__item">
@@ -91,7 +98,9 @@ const Women_Menu = (props) => {
 
       <div className="main-nav__column">
 
-        <div className="main-nav__column-title">Accessories</div>
+        <div className="main-nav__column-title">
+          <a href="">Accessories</a>
+        </div>
 
         <ul className="flex-column">
           <li className="main-nav__item">
@@ -111,7 +120,9 @@ const Women_Menu = (props) => {
 
       <div className="main-nav__column">
 
-        <div className="main-nav__column-title">Collections</div>
+        <div className="main-nav__column-title">
+          <a href="">Collections</a>
+        </div>
 
         <ul className="flex-column">
           <li className="main-nav__item">

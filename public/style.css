@@ -164,7 +164,7 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   padding: 4px;
 }
 
-.main-nav__column-title, .main-nav__item a {
+.main-nav__column-title a, .main-nav__item a {
   color: black;
   text-decoration: none;
   list-style-type: none;
@@ -176,6 +176,10 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   margin-left: -37px;
   font-weight: 300;
   width: 180px;
+}
+
+.main-nav__column-title a:hover, .main-nav__item a:hover {
+  border-bottom: 0.25px solid black;
 }
 
 .special-sale {
@@ -266,15 +270,32 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   display: inline-flex;
 }
 
-.results {
-  width: 380px;
+.search-results {
+  position: absolute;
+  top: 74px;
+  left: 210px;
+  width: 25vw;
   background-color: #ffffff;
   box-shadow: 0 0 5px rgba(0,0,0,.25);
   border-radius: 2px;
   padding: 0;
 }
 
-.result-label {
+.search-results ul {
+  padding: 0;
+}
+
+.search-results ul li {
+  list-style-type: none;
+  color: black;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  line-height: 16px;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.search-results ul li.result-label {
   display: block;
   padding: 0px 10px 0px;
   color: #a0a0a0;
@@ -288,21 +309,8 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   cursor: auto;
 }
 
-.result-label li {
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
-  line-height: 16px;
-  padding: 4px 10px 4px 10px;
-  color: black;
-}
-
-.search-suggestions, .search-categories, .search-pages, .search-products {
-  color: black;
-  list-style-type: none;
-}
-
-.results {
-  position: absolute;
+.bolded {
+  font-weight: 700;
 }
 
 /* ========================================================

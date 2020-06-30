@@ -5,7 +5,9 @@ const Accessories_Menu = (props) => {
     <div className="main-nav__menu-container">
       <div className="main-nav__column">
 
-        <div className="main-nav__column-title" href="">Accessories</div>
+        <div className="main-nav__column-title">
+          <a href="">Accessories</a>
+        </div>
 
         <ul className="flex-column">
           <li className="main-nav__item">

@@ -10,7 +10,9 @@ export default class Header extends React.Component {
     this.headerSelection = this.headerSelection.bind(this);
   }
 
-  // changes selection (in this.state) to name of specific header element
+  // when subcomponents is clicked, change div classes of subcomponents
+  // allows user to change header
+  // click on header element to see effects
   headerSelection(name) { this.setState({ selection: name }) }
 
   render() {
