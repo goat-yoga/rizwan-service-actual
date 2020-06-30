@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from './Logo.svg';
 import Women from './Main_Nav-Subcomponents/Women.jsx';
 import Men from './Main_Nav-Subcomponents/Men.jsx';
 import Accessories from './Main_Nav-Subcomponents/Accessories.jsx';
@@ -15,30 +16,28 @@ export default class Main_Nav extends React.Component {
 
   render() {
     return (
-      <div className="Main-Nav Menu">
-        <h5>Main Nav goes here</h5>
+      <div className="main-nav-container">
 
-        <div id="logo">
-          <a href=""> <img src="logo" alt="DISPLAY ALO-YOGA LOGO HERE" /> </a>
+        <div className="main-nav-logo">
+          <Logo />
         </div>
 
-        <div className="Main-Nav Menu-Choices">
-          <ul>
-            <li className="main-nav__item"> <a href=""> {"NEW IN"} </a> </li>
+        <div className="menu">
+          <ul className="menu-list">
+
+            <li className="main-nav__title">
+              <a className="main-nav__title-name new-in" href="">NEW IN</a>
+            </li>
+
             <Women name={"WOMEN"} />
             <Men name={"MEN"} />
             <Accessories name={"ACCESSORIES"} />
           </ul>
         </div>
 
-        <div className="Main-Nav we-are-alo">
-          <ul>
+        <div className="Main-Nav navbar-icons">
+          <ul className="nav-icons-list">
             <We_Are_Alo name={"WE ARE ALO"} />
-          </ul>
-        </div>
-
-        <div className="Main-Nav Navbar-icons">
-          <ul>
             <Search />
             <Authentication />
             <Cart />

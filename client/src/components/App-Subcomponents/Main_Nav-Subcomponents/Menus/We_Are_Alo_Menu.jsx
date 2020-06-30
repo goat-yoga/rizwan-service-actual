@@ -2,23 +2,23 @@ import React from 'react';
 
 const We_Are_Alo_Menu = (props) => {
   return (
-    <div className="main-nav__menu">
+    <div className="main-nav__menu-container we-are-alo-container">
       <div className="main-nav__column">
 
-        <ul>
-          <li className="main-nav__item bold">
+        <ul className="flex-column we-are-alo-ul">
+          <li className="main-nav__item">
             <a href="">About Us</a></li>
-          <li className="main-nav__item bold">
+          <li className="main-nav__item">
             <a href="">Unparalled Performance</a></li>
-          <li className="main-nav__item bold">
+          <li className="main-nav__item">
             <a href="">Sweatshop Free & Eco-aware</a></li>
-          <li className="main-nav__item bold">
+          <li className="main-nav__item">
             <a href="">The Alo Yoga Family</a></li>
-          <li className="main-nav__item bold">
+          <li className="main-nav__item">
             <a href="">Alo Blog</a></li>
-          <li className="main-nav__item bold">
+          <li className="main-nav__item">
             <a href="">Shop Our Instagram</a></li>
-          <li className="main-nav__item bold">
+          <li className="main-nav__item">
             <a href="">Alo Challennges - Join One!</a></li>
         </ul>
 

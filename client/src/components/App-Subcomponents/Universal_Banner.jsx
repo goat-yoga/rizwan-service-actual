@@ -19,18 +19,14 @@ export default class Universal_Banner extends React.Component {
     this.displayBannerMsg = this.displayBannerMsg.bind(this);
   }
 
-  // increment index, if order is 'next'
-  // initialize index if current index doesn't exist in msg list
-  // decrement index, if order is 'back'
-  // index is last message in list if index is negative
-
-  // change state after index manipulation
-
+  // index manipulation to display the right message
+  // takes 'back' and 'next' only as argument for order arguments.
+  // look at arrow subcomponents for better idea
   displayBannerMsg(index, order) {
     let { messages } = this.state
 
     if (order === 'next') {
-      index++
+      index++;
       if (index === messages.length) { index = 0; }
     }
 
@@ -46,8 +42,7 @@ export default class Universal_Banner extends React.Component {
   render() {
     let { messages, messageIndex } = this.state;
     return (
-      <div className="Univ-Banner">
-        <h5>Universal Banner goes here</h5>
+      <div className="univ-banner-container">
         <BackArrow
           displayBannerMsg={this.displayBannerMsg}
           messageIndex={this.state.messageIndex}

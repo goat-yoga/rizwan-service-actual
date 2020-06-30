@@ -4,31 +4,35 @@ const SearchData = (props) => {
   let { popularSuggestions, categories, pages, products } = props.data;
 
   return (
-    <div className="results">
+    <div className="search-results">
       {console.log(products)}
       <ul>
 
-        <li className="result label">Popular Suggestions</li>
+        <li className="result-label">Popular Suggestions</li>
         {popularSuggestions.map((suggestion, index) => {
-          return (<li className="suggestions" key={index}>{suggestion.page_name}</li>)
+          return (<li className="search-suggestions" key={index}>{suggestion.page_name}</li>)
         })}
 
-        <li className="result label">Categories</li>
+        <li className="result-label">Categories</li>
         {categories.map((category, index) => {
-          return (<li className="categories" key={index}>{category.page_name}</li>)
+          return (<li className="search-categories bolded" key={index}>{category.page_name}</li>)
         })}
 
-        <li className="result label">Pages</li>
+        <li className="result-label">Pages</li>
         {pages.map((page, index) => {
-          return (<li className="pages" key={index}>{page.page_name}</li>)
+          return (<li className="search-pages" key={index}>#{page.page_name}</li>)
         })}
 
-        <li className="result label">Products</li>
+        <li className="result-label">Products</li>
         {products.map((product, index) => {
-          return (<li className="products" key={index}>
-            <a href={product.image} className="products-image"></a>
-            <p>{product.name}</p>
-            <p>{product.price}</p>
+          return (<li className="search-products" key={index}>
+            <span className="search-products-thumbnail">
+              <img src={product.image} className="search-products-image" alt="product pic" />
+            </span>
+            <span className="search-products-info">
+              <span className="search-products-name">{product.name}</span>
+              <span className="search-products-price">${product.price}.00</span>
+            </span>
           </li>)
         })}
       </ul>

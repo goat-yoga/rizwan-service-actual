@@ -17,21 +17,15 @@ export default class Men extends React.Component {
 
   render() {
     let { onHover } = this.state;
-
-    let menu = onHover ? <div className="main-nav__menu"
-      onMouseEnter={this.handleHover}
-    >
-      <Men_Menu />
-    </div > : <div className="main-nav__menu"></div>
+    let menu = onHover ? <div className="main-nav__menu" onMouseEnter={this.handleHover}> <Men_Menu /> </div> : <div className="main-nav__menu"></div>
+    let menuClass = onHover ? "main-nav__menu" : "main-nav__menu hidden"
 
     return (
-      <li className="main-nav__item"
+      <li className="main-nav__title"
         onMouseOver={this.handleHover}
         onMouseLeave={this.outOfHover}>
-
-        <a href="">{this.props.name}</a>
-
-        {menu}
+        <a className="main-nav__title-name" href="">{this.props.name}</a>
+        <div className={menuClass}> <Men_Menu /> </div>
       </li >
     )
   }

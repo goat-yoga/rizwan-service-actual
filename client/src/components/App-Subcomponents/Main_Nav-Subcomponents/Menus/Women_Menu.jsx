@@ -2,12 +2,14 @@ import React from 'react';
 
 const Women_Menu = (props) => {
   return (
-    <div className="main-nav__menu">
+    <div className="main-nav__menu-container">
       <div className="main-nav__column">
 
-        <a href="">Get Inspired</a>
+        <div className="main-nav__column-title">
+          <a href="">Get Inspired</a>
+        </div>
 
-        <ul>
+        <ul className="flex-column">
           <li className="main-nav__item">
             <a href="">New Arrivals</a></li>
           <li className="main-nav__item">
@@ -34,9 +36,12 @@ const Women_Menu = (props) => {
       </div>
 
       <div className="main-nav__column">
-        <a href="">Bras & Tops</a>
 
-        <ul>
+        <div className="main-nav__column-title">
+          <a href="">Bras & Tops</a>
+        </div>
+
+        <ul className="flex-column">
           <li className="main-nav__item">
             <a href="">Bras</a></li>
           <li className="main-nav__item">
@@ -53,9 +58,12 @@ const Women_Menu = (props) => {
       </div>
 
       <div className="main-nav__column">
-        <a href="">Bottoms</a>
 
-        <ul>
+        <div className="main-nav__column-title">
+          <a href="">Bottoms</a>
+        </div>
+
+        <ul className="flex-column">
           <li className="main-nav__item">
             <a href="">Leggings</a></li>
           <li className="main-nav__item">
@@ -72,9 +80,12 @@ const Women_Menu = (props) => {
       </div>
 
       <div className="main-nav__column">
-        <a href="">Jackets & Coverups</a>
 
-        <ul>
+        <div className="main-nav__column-title">
+          <a href="">Jackets & Coverups</a>
+        </div>
+
+        <ul className="flex-column">
           <li className="main-nav__item">
             <a href="">Sweatshirt</a></li>
           <li className="main-nav__item">
@@ -86,9 +97,12 @@ const Women_Menu = (props) => {
       </div>
 
       <div className="main-nav__column">
-        <a href="">Accessories</a>
 
-        <ul>
+        <div className="main-nav__column-title">
+          <a href="">Accessories</a>
+        </div>
+
+        <ul className="flex-column">
           <li className="main-nav__item">
             <a href="">Yoga Mats & Essentials</a></li>
           <li className="main-nav__item">
@@ -105,9 +119,12 @@ const Women_Menu = (props) => {
       </div>
 
       <div className="main-nav__column">
-        <a href="">Collections</a>
 
-        <ul>
+        <div className="main-nav__column-title">
+          <a href="">Collections</a>
+        </div>
+
+        <ul className="flex-column">
           <li className="main-nav__item">
             <a href="">Best Sets</a></li>
           <li className="main-nav__item">
@@ -131,7 +148,7 @@ const Women_Menu = (props) => {
         </ul>
       </div>
 
-    </div>
+    </div >
   )
 }
 
