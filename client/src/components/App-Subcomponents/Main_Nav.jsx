@@ -26,7 +26,7 @@ export default class Main_Nav extends React.Component {
           <ul className="menu-list">
 
             <li className="main-nav__title">
-              <a className="main-nav__title-name" href="">NEW IN</a>
+              <a className="main-nav__title-name new-in" href="">NEW IN</a>
             </li>
 
             <Women name={"WOMEN"} />

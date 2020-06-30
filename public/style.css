@@ -115,6 +115,7 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   display: flex;
   flex-direction: row;
   padding-left: 5px;
+  width:40vw;
 }
 
 .main-nav__title {
@@ -132,6 +133,11 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   margin-top: 14px;
   text-decoration: none;
 }
+
+.main-nav__title.new-in {
+  width: 90px;
+}
+
 
 .main-nav__title-name:hover {
   border-color: black;
@@ -191,7 +197,10 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
 
 .navbar-icons {
   position: relative;
-  left: 20rem;
+  margin-left:50px;
+  width: 60vw;
+  /* display: flex; */
+  /* justify-content: flex-end; */
 }
 
 .nav-icons-list {
@@ -220,14 +229,15 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   flex-direction: row;
   position: absolute;
   width: 94vw;
-  top: 110px;
-  left: -867px;
+  top: 106px;
+  left: -554px;
   padding-bottom: 50px;
   border-bottom: 0.5px solid rgb(222, 222, 222);
 }
 
 .we-are-alo-ul li {
   padding: 6px 0;
+  font-weight: 700;
 }
 
 /* ========================================================
@@ -298,8 +308,8 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
 
 .auth-menu-container {
   position: absolute;
-  top: 165px;
-  left: 250px;
+  top: 64px;
+  left: 322px;
   background: white;
   display: block;
   text-align: center;
@@ -310,6 +320,10 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
 
 .auth-menu-container.hidden {
   visibility: hidden;
+}
+
+.auth-logo {
+  padding: 12px;
 }
 
 .auth-header {
@@ -365,6 +379,7 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   padding-top: 25px;
   padding-bottom: 15px;
   border-bottom: 0.5px solid hsl(0, 0%, 50%);
+  border-top: 0.5px solid hsl(0, 0%, 50%);
   margin-bottom: 25px;
 }
 
@@ -390,12 +405,25 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
 ======================================================== */
 
 .cart-container {
-  padding: 20px 12px;
+  padding: 12px 12px;
+}
+
+.icon-selected {
+  padding: 11px 11px;
+  border: 1px solid #979797;
+  box-sizing: border-box;
+  background: white;
+  z-index: 100;
 }
 
 .cart-block-inner {
+  position: absolute;
+  background: white;
+  border: 1px solid #979797;
+  top: 64px;
+  left: 369px;
   max-height: 43vh;
-  overflow-y: auto;
+  overflow-y: hidden;
   padding: 0 20px 20px;
   font-size: 14px;
 }
