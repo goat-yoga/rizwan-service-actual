@@ -31,7 +31,7 @@ const SearchData = (props) => {
             </span>
             <span className="search-products-info">
               <span className="search-products-name">{product.name}</span>
-              <span className="search-products-price">{product.price}</span>
+              <span className="search-products-price">${product.price}.00</span>
             </span>
           </li>)
         })}
