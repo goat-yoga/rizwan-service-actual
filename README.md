@@ -18,8 +18,8 @@
 ## Usage
 
 > Some usage instructions
-1. run seeding function using `node database/seedGenerator.js`
-2. run `npm install` to install all dependencies
+1. run `npm install` to install all dependencies
+2. run seeding function using `node database/s3data.js`
 
 <!-- Regarding svgr/webpack -->
 - .svg files were scraped from the website
@@ -41,7 +41,7 @@ tutorial below!
 - The svgr/webpack DevDependency recognizes and transpiles svg to render properly.
 
 <!-- Regarding the menu -->
-  - The user should see the menu, while hovering over either the MENU TITLE "MEN", "WOMEN", etc. or the MENU itself.
+  - The user should see the menu, while hovering over either the MENU TITLE "MEN", "WOMEN", etc. and the MENU itself.
 
 ## Requirements
 
