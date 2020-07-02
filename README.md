@@ -18,8 +18,9 @@
 ## Usage
 
 > Some usage instructions
-1. run `npm install` to install all dependencies
-2. run seeding function using `node database/s3data.js`
+1. run `npm install` to install all dependencies.
+2. run seeding function using `node database/s3data.js`.
+3. run `npm run start` and `npm run build` to start up the server and transpilation process, respectively.
 
 <!-- Regarding svgr/webpack -->
 - .svg files were scraped from the website

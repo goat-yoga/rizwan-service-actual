@@ -1,8 +1,8 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
+  "name": "Alo Yoga Navigation Bar",
+  "version": "1.0.0",
+  "description": "The navigation bar that provides a user with a pristine yet elegant navigation experience",
+  "author": "Rizwan Choudhury",
   "license": "",
   "engines": {
     "node": ">=6.13.0"
@@ -10,7 +10,6 @@
   "scripts": {
     "start": "nodemon server/index.js",
     "build": "webpack -d -w",
-    "watchbuild": "nodemon --watch ./ --ext js,css --ignore dist --exec \"npm run build\"",
     "test": "jest --coverage",
     "transform": "npx @svgr/cli"
   },
@@ -46,6 +45,7 @@
     "eslint": "^7.2.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
     "eslint-plugin-react": "^7.20.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^26.1.0",
     "puppeteer": "^4.0.1",
     "react-test-renderer": "^16.13.1",

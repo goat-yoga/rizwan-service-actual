@@ -62,11 +62,13 @@ export default class Search extends React.Component {
         </div >
       ;
 
-    // imput field is not shown if icon not clicked, else field is rendered.
+    // render input field based on icon click status
     let InputField = !searchWasClicked ? null : <input className="search-input-field" type="search" placeholder="Search" onChange={(e) => this.handleSearch(e)} />;
 
-    // show search results based on what was searched or if icon is active
-    let showSearch = (searchResults.length > 0) ?
+    // render search results in input exists && icon is active
+    // render hardcoded message if icon is active, but no input exists
+    // don't render anything if icon is not active.
+    let showSearchResults = (searchResults.length > 0) ?
       <SearchData data={this.state} /> :
 
       (searchWasClicked) ?
@@ -76,11 +78,11 @@ export default class Search extends React.Component {
 
     return (
       < li className="icon-search-bar">
-        <div className="search-icon-and-field" onClick={this.handleSearchToggler}>
+        <div className="search-icon-and-field">
           {SearchIcon}{InputField}
         </div>
 
-        {showSearch}
+        {showSearchResults}
       </li >
     )
   }
