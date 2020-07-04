@@ -1,7 +1,7 @@
 import React from 'react';
-import Messages from './Universal_Banner-Subcomponents/Messages.jsx';
-import BackArrow from './Universal_Banner-Subcomponents/BackArrow.jsx';
-import NextArrow from './Universal_Banner-Subcomponents/NextArrow.jsx';
+import Messages from './Banner-Comp/Messages.jsx';
+import BackArrow from './Banner-Comp/BackArrow.jsx';
+import NextArrow from './Banner-Comp/NextArrow.jsx';
 
 
 export default class Universal_Banner extends React.Component {
