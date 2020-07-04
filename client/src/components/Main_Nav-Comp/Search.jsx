@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import SearchData from './Search/SearchData.jsx';
-import BoldSearch from './Search/search-bold.svg';
-import RegularSearch from './Search/search-regular.svg';
+import BoldSearch from './Search/search-bold.jsx';
+import RegularSearch from './Search/search-regular.jsx';
 
 export default class Search extends React.Component {
   constructor(props) {
@@ -18,8 +18,7 @@ export default class Search extends React.Component {
 
     this.fetchSearchData = this.fetchSearchData.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
-    this.showSearch = this.showSearch.bind(this);
-    this.hideSearch = this.hideSearch.bind(this);
+    this.toggleSearchIcon = this.toggleSearchIcon.bind(this);
   }
 
   // Gets search results from DB
@@ -42,28 +41,16 @@ export default class Search extends React.Component {
     })
   }
 
-  // click on search icon -> icon turns bold and input field is shown
-  // if icon is bold and is clicked -> input field disappears and icon regresses to normal state
-  showSearch() { this.setState({ searchWasClicked: true }) }
-  hideSearch() { this.setState({ searchWasClicked: false }) }
+  // toggles between search status
+  toggleSearchIcon() { this.setState({ searchWasClicked: !this.state.searchWasClicked }) }
 
   render() {
     let { searchResults, popularSuggestions, categories, pages, products, searchWasClicked } = this.state;
 
-    // toggles between icon based on icon click
-    let SearchIcon =
-      (!searchWasClicked) ?
-        <div className="search-logo" onClick={this.showSearch}>
-          <RegularSearch />
-        </div > :
-
-        <div className="search-logo" onClick={this.hideSearch}>
-          <BoldSearch />
-        </div >
-      ;
+    let logo = (!searchWasClicked) ? <RegularSearch /> : <BoldSearch />
 
     // render input field based on icon click status
-    let InputField = !searchWasClicked ? null : <input className="search-input-field" type="search" placeholder="Search" onChange={(e) => this.handleSearch(e)} />;
+    let inputField = !searchWasClicked ? null : <input className="search-input-field" type="search" placeholder="Search" onChange={(e) => this.handleSearch(e)} />;
 
     // render search results in input exists && icon is active
     // render hardcoded message if icon is active, but no input exists
@@ -79,7 +66,10 @@ export default class Search extends React.Component {
     return (
       < li className="icon-search-bar">
         <div className="search-icon-and-field">
-          {SearchIcon}{InputField}
+          <div className="search-logo" onClick={this.toggleSearchIcon}>
+            {logo}
+          </div >
+          {inputField}
         </div>
 
         {showSearchResults}
