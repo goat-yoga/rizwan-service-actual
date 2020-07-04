@@ -1,6 +1,6 @@
 import React from 'react';
-import NormalAuth from './Authentication/Auth-regular.svg';
-import HoveredAuth from './Authentication/Auth-hovered.svg';
+import NormalAuth from './Authentication/Auth-regular.jsx';
+import HoveredAuth from './Authentication/Auth-hovered.jsx';
 import AuthMenu from './Authentication/AuthMenu.jsx';
 
 export default class Authentication extends React.Component {
