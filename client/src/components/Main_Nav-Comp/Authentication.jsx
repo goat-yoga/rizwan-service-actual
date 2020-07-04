@@ -9,34 +9,28 @@ export default class Authentication extends React.Component {
     this.state = {
       isClicked: false
     }
-    this.elementIsClicked = this.elementIsClicked.bind(this);
-    this.elementIsNotClicked = this.elementIsNotClicked.bind(this);
+    this.handleAuthClick = this.handleAuthClick.bind(this);
   }
 
-  elementIsClicked() { this.setState({ isClicked: true }) }
-  elementIsNotClicked() { this.setState({ isClicked: false }, () => console.log(this.state)) }
+  handleAuthClick() { this.setState({ isClicked: !this.state.isClicked }) }
 
   render() {
     let { isClicked } = this.state;
 
-    let AuthStatus = (!isClicked) ?
-      <div>
-        <div className="auth-logo" onClick={this.elementIsClicked}>
-          <NormalAuth />
-        </div>
-        <div className="auth-menu-container hidden"></div>
-      </div> :
-
-      <div>
-        <div className="auth-logo icon-selected" onClick={this.elementIsNotClicked}>
-          <HoveredAuth />
-        </div>
-        <div className="auth-menu-container"> <AuthMenu /> </div>
-      </div>;
+    let logoClassName = (!isClicked) ? "auth-logo" : "auth-logo icon-selected"
+    let logo = (!isClicked) ? <NormalAuth /> : <HoveredAuth />;
+    let menuStatus = (!isClicked) ? "auth-menu-container hidden" : "auth-menu-container";
 
     return (
       <li>
-        {AuthStatus}
+        <div>
+          <div className={logoClassName} onClick={this.handleAuthClick}>
+            {logo}
+          </div>
+
+          <div className={menuStatus}> <AuthMenu /></div>
+
+        </div >
       </li>
     )
   }

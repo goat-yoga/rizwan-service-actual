@@ -3,9 +3,9 @@ import * as React from "react";
 function SvgAuthHovered(props) {
   return (
     <svg
-      className="Auth-hovered_svg__icon-account-hover"
-      width="1em"
-      height="1em"
+      className="Auth-hovered_svg"
+      width="19"
+      height="19"
       {...props}
     >
       <g clipPath="url(#Auth-hovered_svg__clip-542A0A53-EA95-402D-8EF2-46D03499A290)">

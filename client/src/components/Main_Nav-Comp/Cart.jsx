@@ -1,6 +1,6 @@
 import React from 'react';
-import DefaultCartLogo from './Cart/Cart_NoHover.svg';
-import HoverCartLogo from './Cart/Cart_Hover.svg';
+import DefaultCartLogo from './Cart/Cart_NoHover.jsx';
+import HoverCartLogo from './Cart/Cart_Hover.jsx';
 import CartMenu from './Cart/CartMenu.jsx';
 
 export default class Cart extends React.Component {
@@ -20,12 +20,15 @@ export default class Cart extends React.Component {
   render() {
     let { cartOnHover } = this.state;
 
-    let cartStatus = !cartOnHover ?
-      <div className="cart-container"> <DefaultCartLogo /> </div > :
-      <div className="cart-container icon-selected"> <HoverCartLogo /><CartMenu /> </div>;
+    let logoClassName = !cartOnHover ? "cart-logo" : "cart-logo icon-selected";
+    let logo = !cartOnHover ? <DefaultCartLogo /> : <HoverCartLogo />;
+    let menuStatus = !cartOnHover ? "cart-container hidden" : "cart-container";
 
     return (
-      <li onMouseOver={this.hover} onMouseLeave={this.noHover}> {cartStatus} </li>
+      <li onMouseOver={this.hover} onMouseLeave={this.noHover}>
+        <div className={logoClassName} > {logo} </div>
+        <div className={menuStatus}> <CartMenu /> </div>
+      </li>
     )
   }
 }
