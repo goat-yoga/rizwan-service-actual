@@ -11,7 +11,7 @@
     "start": "nodemon server/index.js",
     "seed": "node database/s3data.js",
     "build": "webpack -d -w",
-    "test": "jest --coverage",
+    "test": "jest --coverage"
   },
   "dependencies": {
     "aws-sdk": "^2.708.0",
