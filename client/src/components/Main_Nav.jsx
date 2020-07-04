@@ -1,12 +1,12 @@
 import React from 'react';
-import Logo from './Logo.svg';
-import Women from './Main_Nav-Subcomponents/Women.jsx';
-import Men from './Main_Nav-Subcomponents/Men.jsx';
-import Accessories from './Main_Nav-Subcomponents/Accessories.jsx';
-import We_Are_Alo from './Main_Nav-Subcomponents/We_Are_Alo.jsx';
-import Search from './Main_Nav-Subcomponents/Search.jsx';
-import Authentication from './Main_Nav-Subcomponents/Authentication.jsx';
-import Cart from './Main_Nav-Subcomponents/Cart.jsx';
+import Logo from './Logo.jsx';
+import Women from './Main_Nav-Comp/Women.jsx';
+import Men from './Main_Nav-Comp/Men.jsx';
+import Accessories from './Main_Nav-Comp/Accessories.jsx';
+import We_Are_Alo from './Main_Nav-Comp/We_Are_Alo.jsx';
+import Search from './Main_Nav-Comp/Search.jsx';
+import Authentication from './Main_Nav-Comp/Authentication.jsx';
+import Cart from './Main_Nav-Comp/Cart.jsx';
 
 export default class Main_Nav extends React.Component {
   constructor(props) {
