@@ -8,13 +8,12 @@
 
 :root {
   --main-bg-color: coral;
-  --font-body: 'Merriweather', serif;;
+  --font-body: 'Merriweather', serif;
 }
 
 body {
   font-family: var(--font-body);
   font-size: .9375rem;
-  line-height: 1.2;
   color: #fff;
   background-color: #fff;
   margin: 0 auto;
@@ -29,22 +28,28 @@ body {
   background-color: #aebae1;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 50px;
   cursor: default;
 }
 
-button.nextButton {
-  margin-right: 20px;
+button.nextButton, button.backButton {
   background-color: #aebae1;
   border: none;
   cursor: pointer;
+  height: 7%;
+}
+
+button.nextButton {
+  margin-right: 20px;
 }
 
 button.backButton {
   margin-left: 20px;
-  background-color: #aebae1;
-  border: none;
-  cursor: pointer;
+}
+
+.univ-banner.message p {
+  margin: 1px 0 0 0;
 }
 
 /* gets rid of highlight after user's click */
@@ -115,7 +120,7 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   display: flex;
   flex-direction: row;
   padding-left: 5px;
-  width:40vw;
+  width: 40vw;
 }
 
 .main-nav__title {
@@ -152,16 +157,19 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   display: flex;
   flex-direction: row;
   position: absolute;
-  width: 94vw;
-  top: 150px;
+  background-color: white;
+  width: 94.2vw;
+  top: 170px;
   left: 42px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  margin-top: 6.5px;
+  padding: 35px 0 50px 0;
   border-bottom: 0.5px solid rgb(222, 222, 222);
+  border-top: 0.5px solid rgb(222, 222, 222);
+  z-index: 5;
 }
 
 .main-nav__column-title {
-  padding: 4px;
+  padding: 6px 4px;
 }
 
 .main-nav__column-title a, .main-nav__item a {
@@ -231,15 +239,19 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   font-weight: 400;
 }
 
-.main-nav__menu-container.we-are-alo-container {
+.we-are-alo-container {
   display: flex;
   flex-direction: row;
   position: absolute;
-  width: 94vw;
+  width: 94.2vw;
   top: 44px;
   left: -664px;
+  margin-top: 20px;
+  padding-top: 35px;
   padding-bottom: 50px;
+  border-top: 0.5px solid rgb(222, 222, 222);
   border-bottom: 0.5px solid rgb(222, 222, 222);
+  background-color: white;
 }
 
 .we-are-alo-ul li {

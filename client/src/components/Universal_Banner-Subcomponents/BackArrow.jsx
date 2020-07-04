@@ -1,10 +1,10 @@
 import React from 'react';
-import BackButton from './backArrow.svg';
+import BackButton from './SvgBackArrow.jsx';
 
 const BackArrow = (props) => {
   return (
     <div className="arrow-link back">
-      <button className="backButton" onClick={() => props.displayBannerMsg(props.messageIndex, 'back')}>
+      <button className="backButton" name="back" onClick={() => props.displayBannerMsg(props.messageIndex, 'back')}>
         <BackButton />
       </button>
     </div>

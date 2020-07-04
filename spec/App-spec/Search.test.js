@@ -1,5 +1,5 @@
 import React from 'react';
-import Search from '../../client/src/components/App-Subcomponents/Main_Nav-Subcomponents/Search.jsx';
+import Search from '../../client/src/components/Main_Nav-Subcomponents/Search.jsx';
 import { shallow, mount } from 'enzyme';
 
 describe('Search', () => {
