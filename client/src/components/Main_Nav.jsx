@@ -1,9 +1,5 @@
 import React from 'react';
 import Logo from './Logo.jsx';
-// import Women from './Main_Nav-Comp/Women.jsx';
-// import Men from './Main_Nav-Comp/Men.jsx';
-// import Accessories from './Main_Nav-Comp/Accessories.jsx';
-// import We_Are_Alo from './Main_Nav-Comp/We_Are_Alo.jsx';
 import Search from './Main_Nav-Comp/Search.jsx';
 import Authentication from './Main_Nav-Comp/Authentication.jsx';
 import Cart from './Main_Nav-Comp/Cart.jsx';

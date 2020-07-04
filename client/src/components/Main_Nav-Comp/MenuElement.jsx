@@ -22,7 +22,6 @@ export default class MeneElement extends React.Component {
     let { name } = this.props
 
     let menuSelected = (name === "WOMEN") ? <Women_Menu /> : (name === "MEN") ? <Men_Menu /> : (name === "ACCESSORIES") ? <Accessories_Menu /> : <Alo_Menu />;
-
     let menuClass = onHover ? "main-nav__menu" : "main-nav__menu hidden"
 
     return (
