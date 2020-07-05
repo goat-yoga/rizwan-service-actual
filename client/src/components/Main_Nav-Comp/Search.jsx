@@ -57,14 +57,13 @@ export default class Search extends React.Component {
     // don't render anything if icon is not active.
     let showSearchResults = (searchResults.length > 0) ?
       <SearchData data={this.state} /> :
-
       (searchWasClicked) ?
-        <div className="search-results empty">
+        <div className="search-results-inner empty">
           <em>Start typing for instant search results</em>
         </div> : null;
 
     return (
-      < li className="icon-search-bar">
+      <li className="search-icon">
         <div className="search-icon-and-field">
           <div className="search-logo" onClick={this.toggleSearchIcon}>
             {logo}
@@ -72,7 +71,7 @@ export default class Search extends React.Component {
           {inputField}
         </div>
 
-        {showSearchResults}
+        <div className="search-results">{showSearchResults}</div>
       </li >
     )
   }
