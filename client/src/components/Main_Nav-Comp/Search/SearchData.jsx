@@ -4,7 +4,7 @@ const SearchData = (props) => {
   let { popularSuggestions, categories, pages, products } = props.data;
 
   return (
-    <div className="search-results">
+    <div className="search-results-inner">
       {console.log(products)}
       <ul>
 

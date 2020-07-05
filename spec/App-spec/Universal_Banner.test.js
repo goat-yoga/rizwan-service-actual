@@ -1,45 +1,43 @@
 import React from 'react';
-import Universal_Banner from '../../client/src/components/App-Subcomponents/Universal_Banner.jsx';
+import Universal_Banner from '../../client/src/components/Universal_Banner.jsx';
 import { mount } from 'enzyme'
 
 describe('Universal Banner', () => {
-  let wrapper;
+  let wrapper, nextButton, backButton;
+  let messages, index;
 
   beforeEach(() => {
     wrapper = mount(<Universal_Banner />);
+    nextButton = wrapper.find("button[name='next']");
+    backButton = wrapper.find("button[name='back']");
+    messages = wrapper.state('messages');
   });
 
 
   it('displays first message when app is loaded', () => {
-    let messages = wrapper.state('messages');
-    let index = wrapper.state('messageIndex');
-    let bannerMessage = 'NEW! FRESH BLUE 💙'
-    expect(messages[index]).toBe(bannerMessage);
+    index = wrapper.state('messageIndex');
+    expect(messages[index]).toBe(messages[0]);
   })
+
 
   it('displays correct message when next or back arrow is clicked', () => {
-    wrapper.find("button[name='next']").simulate("click");
-    let messages = wrapper.state('messages');
-    let index = wrapper.state('messageIndex');
-    let bannerMessage = 'Spend $250 and get the Iconic Shopper Tote ($48 value)';
-    expect(messages[index]).toBe(bannerMessage);
+    nextButton.simulate("click");
+    index = wrapper.state('messageIndex');
+    expect(messages[index]).toBe(messages[1]);
 
-    wrapper.find("button[name='back']").simulate("click");
-    let newIndex = wrapper.state('messageIndex');
-    let newBannerMessage = 'NEW! FRESH BLUE 💙';
-    expect(messages[newIndex]).toBe(newBannerMessage);
+    backButton.simulate("click");
+    index = wrapper.state('messageIndex');
+    expect(messages[index]).toBe(messages[0]);
   })
 
-  it('displays correct message due to function edge case', () => {
-    wrapper.find("button[name='back']").simulate("click");
-    let messages = wrapper.state('messages');
-    let index = wrapper.state('messageIndex');
-    let bannerMessage = 'NEW KICKS JUST DROPPED!';
-    expect(messages[index]).toBe(bannerMessage);
 
-    wrapper.find("button[name='next']").simulate("click");
-    let newIndex = wrapper.state('messageIndex');
-    let newBannerMessage = 'NEW! FRESH BLUE 💙';
-    expect(messages[newIndex]).toBe(newBannerMessage);
+  it('displays last msg if (back is clicked && at first msg), and first msg if (next is clicked && at last msg)', () => {
+    backButton.simulate("click");
+    index = wrapper.state('messageIndex');
+    expect(messages[index]).toBe(messages[messages.length - 1]);
+
+    nextButton.simulate("click");
+    index = wrapper.state('messageIndex');
+    expect(messages[index]).toBe(messages[0]);
   })
 });

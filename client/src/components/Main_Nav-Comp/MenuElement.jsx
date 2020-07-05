@@ -1,7 +1,10 @@
 import React from 'react';
+import Women_Menu from './Menus/Women_Menu.jsx';
 import Men_Menu from './Menus/Men_Menu.jsx';
+import Accessories_Menu from './Menus/Accessories_Menu.jsx';
+import Alo_Menu from './Menus/We_Are_Alo_Menu.jsx';
 
-export default class Men extends React.Component {
+export default class MeneElement extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -12,20 +15,21 @@ export default class Men extends React.Component {
   }
 
   handleHover() { this.setState({ onHover: true }) }
-
   outOfHover() { this.setState({ onHover: false }) }
 
   render() {
     let { onHover } = this.state;
-    let menu = onHover ? <div className="main-nav__menu" onMouseEnter={this.handleHover}> <Men_Menu /> </div> : <div className="main-nav__menu"></div>
+    let { name } = this.props
+
+    let menuSelected = (name === "WOMEN") ? <Women_Menu /> : (name === "MEN") ? <Men_Menu /> : (name === "ACCESSORIES") ? <Accessories_Menu /> : <Alo_Menu />;
     let menuClass = onHover ? "main-nav__menu" : "main-nav__menu hidden"
 
     return (
       <li className="main-nav__title"
         onMouseOver={this.handleHover}
         onMouseLeave={this.outOfHover}>
-        <a className="main-nav__title-name" href="">{this.props.name}</a>
-        <div className={menuClass}> <Men_Menu /> </div>
+        <a className="main-nav__title-name" href="">{name}</a>
+        <div className={menuClass}> {menuSelected} </div>
       </li >
     )
   }

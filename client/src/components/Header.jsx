@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderElement from './Header-Subcomponents/HeaderElement.jsx';
+import HeaderElement from './Header-Comp/HeaderElement.jsx';
 
 export default class Header extends React.Component {
   constructor(props) {

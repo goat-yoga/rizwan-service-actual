@@ -1,7 +1,7 @@
 import React from 'react';
-import Messages from './Universal_Banner-Subcomponents/Messages.jsx';
-import BackArrow from './Universal_Banner-Subcomponents/BackArrow.jsx';
-import NextArrow from './Universal_Banner-Subcomponents/NextArrow.jsx';
+import Messages from './Banner-Comp/Messages.jsx';
+import BackArrow from './Banner-Comp/BackArrow.jsx';
+import NextArrow from './Banner-Comp/NextArrow.jsx';
 
 
 export default class Universal_Banner extends React.Component {
@@ -19,9 +19,8 @@ export default class Universal_Banner extends React.Component {
     this.displayBannerMsg = this.displayBannerMsg.bind(this);
   }
 
-  // index manipulation to display the right message
-  // takes 'back' and 'next' only as argument for order arguments.
-  // look at arrow subcomponents for better idea
+  // displays the correct msg based on order given
+  // takes in next or back order
   displayBannerMsg(index, order) {
     let { messages } = this.state
 
@@ -45,14 +44,14 @@ export default class Universal_Banner extends React.Component {
       <div className="univ-banner-container">
         <BackArrow
           displayBannerMsg={this.displayBannerMsg}
-          messageIndex={this.state.messageIndex}
+          messageIndex={messageIndex}
         />
 
         <Messages message={messages[messageIndex]} />
 
         <NextArrow
           displayBannerMsg={this.displayBannerMsg}
-          messageIndex={this.state.messageIndex}
+          messageIndex={messageIndex}
         />
       </div>
     )

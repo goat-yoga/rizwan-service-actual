@@ -25,9 +25,9 @@ export default class AuthMenu extends React.Component {
         </div>
 
         <div className='auth-social'>
-          <button> SIGN IN WITH FACEBOOK  </button>
-          <button> SIGN IN WITH GOOGLE </button>
-          <button> SIGN IN WITH AMAZON </button>
+          <button><p> SIGN IN WITH FACEBOOK </p></button>
+          <button><p> SIGN IN WITH GOOGLE </p></button>
+          <button><p> SIGN IN WITH AMAZON </p></button>
         </div>
 
         <div>

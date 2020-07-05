@@ -1,5 +1,5 @@
 {
-  "name": "Alo Yoga Navigation Bar",
+  "name": "navbar",
   "version": "1.0.0",
   "description": "The navigation bar that provides a user with a pristine yet elegant navigation experience",
   "author": "Rizwan Choudhury",
@@ -9,9 +9,9 @@
   },
   "scripts": {
     "start": "nodemon server/index.js",
+    "seed": "node database/s3data.js",
     "build": "webpack -d -w",
-    "test": "jest --coverage",
-    "transform": "npx @svgr/cli"
+    "test": "jest --coverage"
   },
   "dependencies": {
     "aws-sdk": "^2.708.0",
