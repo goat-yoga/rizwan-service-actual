@@ -25,7 +25,7 @@ export default class Cart extends React.Component {
     let menuStatus = !cartOnHover ? "cart-container hidden" : "cart-container";
 
     return (
-      <li onMouseOver={this.hover} onMouseLeave={this.noHover}>
+      <li className="cart-icon" onMouseOver={this.hover} onMouseLeave={this.noHover}>
         <div className={logoClassName} > {logo} </div>
         <div className={menuStatus}> <CartMenu /> </div>
       </li>

@@ -105,6 +105,7 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
 .main-nav-container {
   display: flex;
   align-items: center;
+  position: relative;
   height: 80px;
   border-bottom: 0.5px solid rgb(222, 222, 222);
   margin: 0 45px;
@@ -158,13 +159,13 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   position: absolute;
   background-color: white;
   width: 94.2vw;
-  top: 170px;
-  left: 42px;
-  margin-top: 6.5px;
-  padding: 35px 0 50px 0;
+  top: 37px;
+  left: 0;
+  margin-top: 41px;
+  padding: 30px 0 50px 0;
   border-bottom: 0.5px solid rgb(222, 222, 222);
   border-top: 0.5px solid rgb(222, 222, 222);
-  z-index: 5;
+  z-index: 7;
 }
 
 .main-nav__column-title {
@@ -219,6 +220,7 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
 
 .nav-icons-list {
   list-style-type: none;
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -227,29 +229,22 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
 }
 
 .nav-icons-list li {
-  padding: 0 6px;
+  padding: 32px 6px 22px 6px;
 }
 
 /* ========================================================
    Main Navigation - We Are Alo - special
 ======================================================== */
 
-.we-are-alo {
+.nav-icons-list .main-nav__title .main-nav__title-name a {
   font-weight: 400;
 }
 
 .we-are-alo-container {
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  width: 94.2vw;
-  top: 44px;
+  top: 40px;
   left: -664px;
-  margin-top: 20px;
-  padding-top: 35px;
-  padding-bottom: 50px;
-  border-top: 0.5px solid rgb(222, 222, 222);
-  border-bottom: 0.5px solid rgb(222, 222, 222);
+  margin-top: 46px;
+  padding: 30px 0 50px 0;
   background-color: white;
 }
 
@@ -334,6 +329,7 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
 .search-products-thumbnail {
   display: inline-block;
   float: left;
+  clear: both;
   margin: 5px 10px 5px 0px;
   text-align: center;
   width: 70px;
@@ -391,6 +387,7 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   border: 1px solid #979797;
   width: 353px;
   padding: 0 20px 34px 20px;
+  z-index: 10;
 }
 
 .auth-menu-container.hidden {
@@ -482,6 +479,10 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
    Main Navigation - Cart
 ======================================================== */
 
+.cart-icon {
+  position: relative;
+}
+
 .cart-logo {
   padding: 12px 12px;
 }
@@ -498,11 +499,12 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   position: absolute;
   background: white;
   border: 1px solid #979797;
-  top: 64px;
-  left: 280px;
-  max-height: 43vh;
-  padding: 0 20px 20px;
+  top: 45px;
+  right: 6px;
+  padding: 0 16px 16px;
   font-size: 14px;
+  z-index: 12;
+  width: 275px;
 }
 
 .cart-status, .cart-list {
