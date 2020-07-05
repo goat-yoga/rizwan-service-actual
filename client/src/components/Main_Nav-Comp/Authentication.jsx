@@ -22,7 +22,7 @@ export default class Authentication extends React.Component {
     let menuStatus = (!isClicked) ? "auth-menu-container hidden" : "auth-menu-container";
 
     return (
-      <li>
+      <li className="auth-icon">
         <div>
           <div className={logoClassName} onClick={this.handleAuthClick}>
             {logo}

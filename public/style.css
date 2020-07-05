@@ -294,7 +294,7 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   z-index: 10;
 }
 
-.search-results-inner.empty {
+.search-results.empty {
   color: black;
   padding: 10px;
 }
@@ -377,11 +377,15 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
    Main Navigation - Authentication
 ======================================================== */
 
+.auth-icon {
+  position: relative;
+}
+
 .auth-menu-container {
   position: absolute;
-  top: 64px;
-  left: 233px;
   background: white;
+  top: 42px;
+  right: 6px;
   display: block;
   text-align: center;
   border: 1px solid #979797;
@@ -462,7 +466,7 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   background-size: 40px 40px;
   border-radius: 0px;
   color: black;
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 10px;
   padding-bottom: 4px;
   line-height: 40px;
@@ -470,6 +474,9 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   font-weight: 700;
 }
 
+.auth-social button p {
+  margin: 0 auto;
+}
 
 /* ========================================================
    Main Navigation - Cart
