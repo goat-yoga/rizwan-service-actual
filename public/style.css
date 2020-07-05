@@ -280,7 +280,7 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
 .search-results {
   position: absolute;
   right: 5px;
-  top: 50px;
+  top: 70px;
   width: 350px;
   background-color: #ffffff;
   box-shadow: 0 0 5px rgba(0,0,0,.35);
@@ -380,7 +380,7 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
 .auth-menu-container {
   position: absolute;
   background: white;
-  top: 42px;
+  top: 74px;
   right: 6px;
   display: block;
   text-align: center;
@@ -499,7 +499,7 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   position: absolute;
   background: white;
   border: 1px solid #979797;
-  top: 45px;
+  top: 77px;
   right: 6px;
   padding: 0 16px 16px;
   font-size: 14px;
