@@ -1,13 +1,15 @@
-/* This styling is for PROXY SERVER only!!! */
-/* This styling is for PROXY SERVER only!!! */
-/* This styling is for PROXY SERVER only!!! */
+/* This styling is for SERVICE SERVER only!!! */
+/* This styling is for SERVICE SERVER only!!! */
+/* This styling is for SERVICE SERVER only!!! */
 
 .label {
   text-decoration: underline;
 }
+
 /* ========================================================
    Body
 ======================================================== */
+
 :root {
   --main-bg-color: coral;
   --font-body: 'Merriweather', serif;
@@ -19,11 +21,12 @@ body {
   color: #fff;
   background-color: #fff;
   margin: 0 auto;
-  color:black;
 }
+
 /* ========================================================
    Universal Banner
 ======================================================== */
+
 .univ-banner-container {
   position: relative;
   background-color: #aebae1;
@@ -33,21 +36,25 @@ body {
   height: 50px;
   cursor: default;
 }
+
 button.nextButton, button.backButton {
   background-color: #aebae1;
   border: none;
   cursor: pointer;
 }
+
 button.nextButton {
   margin-right: 20px;
 }
+
 button.backButton {
   margin-left: 20px;
 }
+
 .univ-banner.message p {
   margin: 1px 0 0 0;
-  color: white;
 }
+
 /* gets rid of highlight after user's click */
 button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   outline: none;
@@ -57,25 +64,30 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
 /* ========================================================
    Header
 ======================================================== */
+
 .header-container {
   background: black;
 }
+
 .header-items-list {
   list-style-type: none;
   padding: 0;
   font-size: 14px;
   margin: 0 auto;
 }
+
 .header-item {
   display: inline-flex;
   padding: 16px 55px;
   cursor: pointer;
 }
+
 /* header item being selected has different style */
 .header-item.selected {
-  background: white!important;
+  background: white;
   color: black;
 }
+
 /* Moves the '1-2 day shipping' message ONLY to the right */
 .header-message {
   position: relative;
@@ -83,16 +95,16 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   padding: 15px 20px;
   cursor: default;
 }
+
 /* on hover, change non-selected header items color */
 .not-selected:hover {
   background: rgba(255, 255, 255, 0.25);
 }
-.not-selected {
-  color: white;
-}
+
 /* ========================================================
    Main Navigation - Logo & Menu List
 ======================================================== */
+
 /* align-item: center -> dropdown menu looking funky */
 .main-nav-container {
   display: flex;
@@ -102,9 +114,11 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   border-bottom: 0.5px solid rgb(222, 222, 222);
   margin: 0 45px;
 }
+
 .main-nav-logo {
   margin-right: 10px;
 }
+
 .menu-list {
   list-style-type: none;
   display: flex;
@@ -112,9 +126,11 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   padding-left: 5px;
   width: 40vw;
 }
+
 .main-nav__title {
   padding: 32px 0 22px 0;
 }
+
 .main-nav__title-name {
   padding: 12px;
   padding-bottom: 4px;
@@ -127,16 +143,20 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   margin-top: 14px;
   text-decoration: none;
 }
+
 .main-nav__title.new-in {
   width: 90px;
 }
+
 .main-nav__title-name:hover {
   border-color: black;
   bottom: 10px;
 }
+
 .hidden {
   visibility: hidden;
 }
+
 .main-nav__menu-container {
   display: flex;
   flex-direction: row;
@@ -151,50 +171,58 @@ button.backButton:focus, button.nextButton:focus, .search-input-field:focus {
   border-top: 0.5px solid rgb(222, 222, 222);
   z-index: 7;
 }
+
 .main-nav__column-title {
   padding: 6px 4px;
 }
-ul.flex-column {
-  list-style-type: none;
-}
+
 .main-nav__column-title a, .main-nav__item a {
   color: black;
   text-decoration: none;
   list-style-type: none;
   font-size: 12px;
 }
+
 .main-nav__item {
   padding: 6px 0;
   margin-left: -37px;
   font-weight: 300;
   width: 180px;
+  list-style-type: none;
 }
+
 .main-nav__column-title a:hover, .main-nav__item a:hover {
   border-bottom: 0.25px solid black;
 }
+
 .special-sale {
   margin-top: 15px;
   font-weight: 400;
 }
+
 /*
 .flex-column {
   flex-direction: column;
   list-style-type: none;
   padding: 0;
 }
+
 .flex-row {
   flex-direction: row;
   list-style-type: none;
   padding: 0;
 } */
+
 /* ========================================================
    Main Navigation - Nav Icons
 ======================================================== */
+
 .navbar-icons {
   top: 5px;
   position: relative;
   width: 60vw;
 }
+
 .nav-icons-list {
   list-style-type: none;
   position: relative;
@@ -204,45 +232,56 @@ ul.flex-column {
   align-items: center;
   padding-left: 0px;
 }
+
 .nav-icons-list li {
   padding: 32px 6px 22px 6px;
 }
+
 /* ========================================================
    Main Navigation - We Are Alo - special
 ======================================================== */
+
 .nav-icons-list .main-nav__title .main-nav__title-name a {
   font-weight: 400;
 }
+
 .we-are-alo-container {
   top: 40px;
-  left: -700px;
+  left: -664px;
   margin-top: 46px;
   padding: 30px 0 50px 0;
   background-color: white;
 }
+
 .we-are-alo-ul li {
   padding: 6px 0;
   font-weight: 700;
 }
+
 /* ========================================================
    Main Navigation - Search
 ======================================================== */
+
 .search-icon {
   padding: 25px 10px;
   position: relative;
 }
+
 .search-logo {
   padding-right: 3px;
 }
+
 .search-input-field {
   border: 0;
   line-height: 1.33;
   height: 30px;
   border-bottom: 0.5px solid hsl(0, 0%, 50%);
 }
+
 .search-icon-and-field {
   display: inline-flex;
 }
+
 .search-results {
   position: absolute;
   right: 5px;
@@ -254,12 +293,16 @@ ul.flex-column {
   padding: 0;
   z-index: 10;
 }
+
 .search-results-inner.empty {
+  color: black;
   padding: 10px;
 }
+
 .search-results ul {
   padding: 0;
 }
+
 .search-results ul li {
   list-style-type: none;
   color: black;
@@ -269,6 +312,7 @@ ul.flex-column {
   padding: 4px 10px;
   font-size: 12px;
 }
+
 .search-results ul li.result-label {
   display: block;
   padding: 0px 10px 0px;
@@ -282,9 +326,11 @@ ul.flex-column {
   background: #f7f7f7;
   cursor: auto;
 }
+
 .search-products {
   min-height: 80px;
 }
+
 .search-products-thumbnail {
   display: inline-block;
   float: left;
@@ -293,16 +339,19 @@ ul.flex-column {
   text-align: center;
   width: 70px;
 }
+
 .search-products-image {
   display: inline;
   vertical-align: middle;
   max-width: 70px;
   max-height: 70px;
 }
+
 .search-products-info {
   overflow: hidden;
   display: block;
 }
+
 .search-products-name {
   display: block;
   color: black;
@@ -312,6 +361,7 @@ ul.flex-column {
   letter-spacing: 0.8px!important;
   text-decoration: uppercase;
 }
+
 .search-products-price{
   float: left;
   margin-top: 6px;
@@ -319,15 +369,19 @@ ul.flex-column {
   font-weight: bold;
   font-size: 115%;
 }
+
 .bolded {
   font-weight: 700;
 }
+
 /* ========================================================
    Main Navigation - Authentication
 ======================================================== */
+
 .auth-icon {
   position: relative;
 }
+
 .auth-menu-container {
   position: absolute;
   background: white;
@@ -336,46 +390,55 @@ ul.flex-column {
   display: block;
   text-align: center;
   border: 1px solid #979797;
-  width: 397px;
+  width: 353px;
   padding: 0 20px 34px 20px;
   z-index: 10;
 }
+
 .auth-menu-container.hidden {
   visibility: hidden;
 }
+
 .auth-logo {
   padding: 12px;
 }
+
 .auth-header {
   font-size: 20px;
   color: black;
   padding: 24px 0 16px 0;
 }
+
 .auth-input {
   text-align: center;
   padding-bottom: 2px;
 }
-.auth-email, .auth-password {
+
+.auth-input input {
   display: block;
+  width: 100%;
   padding: .5rem .75rem;
   font-size: 1rem;
   line-height: 1.2;
-  height: 39px;
-  width: 355px;
+  height: 19px;
+  width: 327px;
   color: #333;
   background-color: #fff;
   border: 1px solid #dedede;
 }
+
 .auth-forgot-password {
   text-align: left;
   color: black;
   font-size: 12px;
   margin: 6px 0;
 }
+
 .auth-forgot-password:hover {
   color: rgb(87, 87, 87);
   text-decoration: underline;
 }
+
 .auth-button {
   padding: 10px 16px;
   background: black;
@@ -383,10 +446,12 @@ ul.flex-column {
   width: 355px;
   height: 40px;
 }
+
 .auth-submit {
   margin-bottom: 8px;
   border-bottom: 0.5px solid hsl(0, 0%, 50%);
 }
+
 .auth-social {
   padding-top: 25px;
   padding-bottom: 15px;
@@ -394,6 +459,7 @@ ul.flex-column {
   border-top: 0.5px solid hsl(0, 0%, 50%);
   margin-bottom: 25px;
 }
+
 .auth-social button {
   border-color: #2d5073;
   background-color: #e0dfdf;
@@ -409,18 +475,23 @@ ul.flex-column {
   width: 353px;
   font-weight: 700;
 }
+
 .auth-social button p {
   margin: 0 auto;
 }
+
 /* ========================================================
    Main Navigation - Cart
 ======================================================== */
+
 .cart-icon {
   position: relative;
 }
+
 .cart-logo {
   padding: 12px 12px;
 }
+
 .icon-selected {
   padding: 11px 11px;
   border: 1px solid #979797;
@@ -428,6 +499,7 @@ ul.flex-column {
   background: white;
   z-index: 10;
 }
+
 .cart-block-inner {
   position: absolute;
   background: white;
@@ -439,17 +511,20 @@ ul.flex-column {
   z-index: 12;
   width: 275px;
 }
+
 .cart-status, .cart-list {
   color: black;
   display: flex;
   justify-content: center;
   text-align: center;
 }
+
 .cart-status {
   margin: 20px;
   padding: 10px 0;
   border-bottom: 1px solid #bfbfbf;
 }
+
 .cart-list {
   list-style-type: none;
   padding: 10px;

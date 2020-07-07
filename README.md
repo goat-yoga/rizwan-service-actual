@@ -19,8 +19,15 @@
 
 > Some usage instructions
 1. run `npm install` to install all dependencies.
-2. run seeding function using `node database/s3data.js`.
-3. run `npm run start` and `npm run build` to start up the server and transpilation process, respectively.
+2. run seeding function using `npm run seed`.
+3. run `npm run start` and `npm run build` to start up the server and webpack, respectively.
+
+<!-- VERY IMPORTANT!! CSS -->
+<!-- VERY IMPORTANT!! CSS -->
+<!-- VERY IMPORTANT!! CSS -->
+- use `serviceStyle.css` for service styling!!
+- use `style.css` for proxy styling!!
+<!-- VERY IMPORTANT!! CSS -->
 
 <!-- Regarding svgr/webpack -->
 - .svg files were scraped from the website
