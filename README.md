@@ -1,6 +1,6 @@
 # Project Name
 
-This is the Navigation Bar component of Alo-Yoga website
+This is the Navigation Bar module of the Alo-Yoga website cloned by team G.O.A.T. Yoga.
 
 ## Related Projects
 
@@ -9,8 +9,7 @@ This is the Navigation Bar component of Alo-Yoga website
 ## Table of Contents
 
 1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
+2. [Requirements](#requirements)
 
 ## Usage
 
@@ -19,20 +18,13 @@ This is the Navigation Bar component of Alo-Yoga website
 3. run `npm run build` to run webpack.
 4. run `npm start` to start server.
 
+Note: due to Amazon S3 service's fetch limit. I had to refactor my code to display fake image using another method than S3. This is why only one picture shows up when database is seeded.
+
 ## Requirements
 
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
 - Node 6.13.0
-- etc
+- Mongo Shell (OPTIONAL, but helps)
 
-## Development
+## Acknowledgements
 
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install -g webpack
-npm install
-```
+I would like to thank my team members from G.O.A.T. Yoga for all the fun times and the trials and tribulations that we faced together.
