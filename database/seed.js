@@ -1,21 +1,29 @@
-const faker = require('faker');
+const faker = require("faker");
 
-// misc === miscellaneous fyi :)
+let seedMethods = {
+  createMiscPages: () => {
+    let miscList = [];
 
-// create 15 pages for 3 models: popular suggestions, category, pages
-let createMiscPages = () => {
+    for (let i = 0; i < 40; i++) {
+      let productObj = { page_name: faker.commerce.product() };
+      miscList.push(productObj);
+    }
 
-  let miscList = [];
+    return miscList;
+  },
 
-  for (let i = 0; i < 40; i++) {
-    let productObj = { page_name: faker.commerce.product() };
-    miscList.push(productObj);
-  }
+  seedItemsIntoModel: (items, model) => {
+    let itemList = [];
 
-  return miscList;
-}
+    items.forEach((item) => {
+      let unit = new model(item);
+      itemList.push(unit);
+    });
 
-// create obj holding created methods
-let seedMethods = { createMiscPages }
+    model.insertMany(itemList, (err) => {
+      err ? console.log(err) : console.log("unit was seeded");
+    });
+  },
+};
 
 module.exports = seedMethods;
