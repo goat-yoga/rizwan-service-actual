@@ -1,155 +1,189 @@
-import React from 'react';
+import React from "react";
 
 const Women_Menu = (props) => {
   return (
     <div className="main-nav__menu-container">
       <div className="main-nav__column">
-
         <div className="main-nav__column-title">
           <a href="">Get Inspired</a>
         </div>
 
         <ul className="flex-column">
           <li className="main-nav__item">
-            <a href="">New Arrivals</a></li>
+            <a href="">New Arrivals</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Curve</a></li>
+            <a href="">Curve</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Bestsellers</a></li>
+            <a href="">Bestsellers</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Strawberry</a></li>
+            <a href="">Strawberry</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Neon Lime</a></li>
+            <a href="">Neon Lime</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Macaron Pink</a></li>
+            <a href="">Macaron Pink</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Blue Moon</a></li>
+            <a href="">Blue Moon</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Prints</a></li>
+            <a href="">Prints</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Best Sets</a></li>
+            <a href="">Best Sets</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Lounge Shop</a></li>
+            <a href="">Lounge Shop</a>
+          </li>
           <li className="main-nav__item special-sale">
-            <a href="">Sale</a></li>
+            <a href="">Sale</a>
+          </li>
         </ul>
       </div>
 
       <div className="main-nav__column">
-
         <div className="main-nav__column-title">
           <a href="">Bras & Tops</a>
         </div>
 
         <ul className="flex-column">
           <li className="main-nav__item">
-            <a href="">Bras</a></li>
+            <a href="">Bras</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Tanks</a></li>
+            <a href="">Tanks</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Short Sleeves</a></li>
+            <a href="">Short Sleeves</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Long Sleeves</a></li>
+            <a href="">Long Sleeves</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Crop Tops</a></li>
+            <a href="">Crop Tops</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Full Length Tops</a></li>
+            <a href="">Full Length Tops</a>
+          </li>
         </ul>
       </div>
 
       <div className="main-nav__column">
-
         <div className="main-nav__column-title">
           <a href="">Bottoms</a>
         </div>
 
         <ul className="flex-column">
           <li className="main-nav__item">
-            <a href="">Leggings</a></li>
+            <a href="">Leggings</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">7/8 Leggings</a></li>
+            <a href="">7/8 Leggings</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Capris</a></li>
+            <a href="">Capris</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Bikers & Shorts</a></li>
+            <a href="">Bikers & Shorts</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Sweats & Lounge</a></li>
+            <a href="">Sweats & Lounge</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Underwear</a></li>
+            <a href="">Underwear</a>
+          </li>
         </ul>
       </div>
 
       <div className="main-nav__column">
-
         <div className="main-nav__column-title">
           <a href="">Jackets & Coverups</a>
         </div>
 
         <ul className="flex-column">
           <li className="main-nav__item">
-            <a href="">Sweatshirt</a></li>
+            <a href="">Sweatshirt</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Jackets</a></li>
+            <a href="">Jackets</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Sherpa</a></li>
+            <a href="">Sherpa</a>
+          </li>
         </ul>
-
       </div>
 
       <div className="main-nav__column">
-
         <div className="main-nav__column-title">
           <a href="">Accessories</a>
         </div>
 
         <ul className="flex-column">
           <li className="main-nav__item">
-            <a href="">Yoga Mats & Essentials</a></li>
+            <a href="">Yoga Mats & Essentials</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Bags</a></li>
+            <a href="">Bags</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Hats & Hair Accessories</a></li>
+            <a href="">Hats & Hair Accessories</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Shoes & Socks</a></li>
+            <a href="">Shoes & Socks</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Books</a></li>
+            <a href="">Books</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Gift Card</a></li>
+            <a href="">Gift Card</a>
+          </li>
         </ul>
       </div>
 
       <div className="main-nav__column">
-
         <div className="main-nav__column-title">
           <a href="">Collections</a>
         </div>
 
         <ul className="flex-column">
           <li className="main-nav__item">
-            <a href="">Best Sets</a></li>
+            <a href="">Best Sets</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Cargo</a></li>
+            <a href="">Cargo</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Goddess</a></li>
+            <a href="">Goddess</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Moto</a></li>
+            <a href="">Moto</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Alosoft</a></li>
+            <a href="">Alosoft</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Alolux</a></li>
+            <a href="">Alolux</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Airlift</a></li>
+            <a href="">Airlift</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Airbrush</a></li>
+            <a href="">Airbrush</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Ripped</a></li>
+            <a href="">Ripped</a>
+          </li>
           <li className="main-nav__item">
-            <a href="">Vapor</a></li>
+            <a href="">Vapor</a>
+          </li>
         </ul>
       </div>
-
-    </div >
-  )
-}
+    </div>
+  );
+};
 
 export default Women_Menu;
