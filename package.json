@@ -11,8 +11,7 @@
     "start": "nodemon server/index.js",
     "seed": "node database/s3data.js",
     "viewerSeed": "node database/viewerDatabase/viewerSeedFunctions.js",
-    "build": "webpack -d -w",
-    "test": "jest --coverage"
+    "build": "webpack -d -w"
   },
   "dependencies": {
     "aws-sdk": "^2.708.0",
