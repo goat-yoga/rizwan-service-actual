@@ -10,8 +10,8 @@
   "scripts": {
     "start": "nodemon server/index.js",
     "seed": "node database/s3data.js",
-    "build": "webpack -d -w",
-    "test": "jest --coverage"
+    "viewerSeed": "node database/viewerDatabase/viewerSeedFunctions.js",
+    "build": "webpack -d -w"
   },
   "dependencies": {
     "aws-sdk": "^2.708.0",
@@ -47,7 +47,6 @@
     "eslint-plugin-react": "^7.20.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.1.0",
-    "puppeteer": "^4.0.1",
     "react-test-renderer": "^16.13.1",
     "style-loader": "^1.2.1",
     "webpack-cli": "^3.3.12"
