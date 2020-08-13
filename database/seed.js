@@ -1,7 +1,7 @@
 const faker = require("faker");
 
 let seedMethods = {
-  createMiscPages: () => {
+  createMiscPages: (count) => {
     let miscList = [];
 
     for (let i = 0; i < 40; i++) {
@@ -12,15 +12,14 @@ let seedMethods = {
     return miscList;
   },
 
-  createProducts: () => {
+  createProducts: (count) => {
     let productList = [];
 
-    // creates obj w/ name, price, img
-    for (let i = 0; i < data.Contents.length; i++) {
+    for (let i = 0; i < count; i++) {
       let productObj = {
         name: faker.commerce.product(),
         price: Math.floor(Math.random() * 100) + 50,
-        img: ``,
+        img: `https://loremflickr.com/320/240`,
       };
 
       productList.push(productObj);

@@ -25,10 +25,10 @@ let seedItemsIntoModel = (items, model) => {
 };
 
 // create list to be inserted into DB
-let allProducts = createProducts();
-let allPopularSuggestions = createMiscPages();
-let allCategories = createMiscPages();
-let allPages = createMiscPages();
+let allProducts = createProducts(100);
+let allPopularSuggestions = createMiscPages(30);
+let allCategories = createMiscPages(30);
+let allPages = createMiscPages(30);
 
 // seed list of items
 seedItemsIntoModel(allProducts, productModel);
