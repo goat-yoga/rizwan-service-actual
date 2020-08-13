@@ -12,17 +12,21 @@ let seedMethods = {
     return miscList;
   },
 
-  seedItemsIntoModel: (items, model) => {
-    let itemList = [];
+  createProducts: () => {
+    let productList = [];
 
-    items.forEach((item) => {
-      let unit = new model(item);
-      itemList.push(unit);
-    });
+    // creates obj w/ name, price, img
+    for (let i = 0; i < data.Contents.length; i++) {
+      let productObj = {
+        name: faker.commerce.product(),
+        price: Math.floor(Math.random() * 100) + 50,
+        img: ``,
+      };
 
-    model.insertMany(itemList, (err) => {
-      err ? console.log(err) : console.log("unit was seeded");
-    });
+      productList.push(productObj);
+    }
+
+    return productList;
   },
 };
 
