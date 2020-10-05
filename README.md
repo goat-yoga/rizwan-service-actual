@@ -1,4 +1,4 @@
-# Project Name
+# Alo-Yoga Nav Bar Replica
 
 This is the Navigation Bar module of the Alo-Yoga website cloned by team G.O.A.T. Yoga.
 
