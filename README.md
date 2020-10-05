@@ -5,6 +5,10 @@ This is the Navigation Bar module of the Alo-Yoga website cloned by team G.O.A.T
 ## Related Projects
 
 - https://github.com/goat-yoga/rizwan-service-actual
+- https://github.com/goat-yoga/russell-service
+- https://github.com/goat-yoga/kimberly-service
+- https://github.com/goat-yoga/wilson_service
+- https://github.com/goat-yoga/rizwan-proxy
 
 ## Table of Contents
 
